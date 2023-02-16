@@ -1,13 +1,13 @@
 /*      GENERAL     */
 
 html {
+    font-family: 'Gugi', cursive;
     max-width: 1600px;
     min-width: 300px;
     margin: 0 auto;
 }
 
 body {
-    font-family: 'Roboto', 'Source Sans Pro', sans-serif;
     max-width: 100%;
 }
 
@@ -31,7 +31,8 @@ h2 {
 
 * {
     padding: 0;
-    box-sizing: border-box; /* means that all the things inside have internal limits in order to hide y-scroll */
+    box-sizing: border-box;
+    /* means that all the things inside have internal limits in order to hide y-scroll */
 }
 
 .container {
@@ -69,7 +70,6 @@ h2 {
 
 .login-form__title {
     padding-bottom: 41px;
-    font-family: Ubuntu-Bold;
     font-size: 32px;
     color: black;
     line-height: 1.2;
@@ -86,7 +86,8 @@ h2 {
     padding: 5px 0 33px 0;
 }
 
-.validate-input, .gender {
+.validate-input,
+.gender {
     position: relative;
 }
 
@@ -98,7 +99,6 @@ h2 {
 }
 
 .input {
-    font-family: Ubuntu-Regular;
     font-size: 20px;
     color: rgb(4, 55, 0);
     line-height: 1.2;
@@ -110,23 +110,6 @@ h2 {
     transition: all .4s;
 }
 
-.gender {
-    font-family: Ubuntu-Regular;
-    color: rgb(119, 119, 119);
-    line-height: 1.2;
-    font-size: 20px;
-
-    display: flex;
-    padding: 29px 10px 29px 80px;
-}
-
-.gender__radio {
-    /* display: flex;
-    justify-content: space-around; */
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
 .container-login-form__btn {
     width: 100%;
     display: flex;
@@ -136,7 +119,6 @@ h2 {
 }
 
 .login-form__btn {
-    font-family: Ubuntu-Bold;
     font-size: 18px;
     color: #fff;
     line-height: 1.2;
@@ -149,7 +131,7 @@ h2 {
     height: 42px;
     border-radius: 21px;
     position: relative;
-    background: -webkit-linear-gradient(left,#00360e,#004d13,#351600);
+    background: -webkit-linear-gradient(left, #00360e, #004d13, #351600);
 }
 
 /*      SUB-GENERAL     */
@@ -164,7 +146,11 @@ input {
     border: none;
 }
 
-button, input, optgroup, select, textarea {
+button,
+input,
+optgroup,
+select,
+textarea {
     margin: 0;
     font-family: inherit;
     font-size: inherit;
@@ -181,7 +167,6 @@ button, input, optgroup, select, textarea {
 
 
 #errorMsg {
-    font-family: Ubuntu-Bold;
     font-size: 21px;
     font-weight: 500;
     font-style: italic;
