@@ -6,6 +6,7 @@
 
 .payment {
   min-height: 100%;
+  font-family: "Gugi", cursive;
   overflow: hidden;
   display: flex;
   flex-direction: column;

@@ -1,71 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="../assets/styles/payment.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="../assets/styles/normalize.css" />
+  <link rel="stylesheet" href="../assets/styles/payment.css" />
 
-    <title>Document</title>
-  </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
 
-  <body>
-    <div class="payment">
-      <div class="payment__wrapper">
-        <div class="payment__step">
-          <div class="payment__steps">
-            <div class="payment__number">1</div>
-            <div class="payment__text payment__text_chosen">
-              choose a package
-            </div>
-            <div class="payment__line"></div>
+  <link rel="stylesheet" href="../assets/styles/normalize.css" />
+
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="payment">
+    <div class="payment__wrapper">
+      <div class="payment__step">
+        <div class="payment__steps">
+          <div class="payment__number">1</div>
+          <div class="payment__text payment__text_chosen">
+            choose a package
           </div>
-          <div class="payment__steps">
-            <div class="payment__number">2</div>
-            <div class="payment__text">choose a Mode of payment</div>
-            <div class="payment__line"></div>
+          <div class="payment__line"></div>
+        </div>
+        <div class="payment__steps">
+          <div class="payment__number">2</div>
+          <div class="payment__text">choose a Mode of payment</div>
+          <div class="payment__line"></div>
+        </div>
+        <div class="payment__steps">
+          <div class="payment__number">3</div>
+          <div class="payment__text">enjoy movibe 100%</div>
+        </div>
+      </div>
+      <div class="payment__unlimited unlimited">
+        <div class="unlimited__title">Advanced premium</div>
+        <div class="unlimited__main-block">
+          <div class="unlimited__picture">
+            <img src="../assets/images/payment/payment-pop-corn.png" alt="" />
+            <p class="unlimited__pic-text">unlimited access</p>
           </div>
-          <div class="payment__steps">
-            <div class="payment__number">3</div>
-            <div class="payment__text">enjoy movibe 100%</div>
+          <div class="unlimited__text">
+            Watch movies unlimits. You can access all contents, movies
+            currently available on Movibe. No need to watch ads, no
+            interruptions.
           </div>
         </div>
-        <div class="payment__unlimited unlimited">
-          <div class="unlimited__title">Advanced premium</div>
-          <div class="unlimited__main-block">
-            <div class="unlimited__picture">
-              <img src="../assets/images/payment/payment-pop-corn.png" alt="" />
-              <p class="unlimited__pic-text">unlimited access</p>
-            </div>
-            <div class="unlimited__text">
-              Watch movies unlimits. You can access all contents, movies
-              currently available on Movibe. No need to watch ads, no
-              interruptions.
-            </div>
+      </div>
+      <div class="payment__packages">
+        <div class="unlimited__title">packages</div>
+        <div class="payment__tariff">
+          <div class="payment__tariff-block block-one">
+            <p>premium 1 day</p>
+            <div class="payment__on-click">0.49$/day</div>
           </div>
-        </div>
-        <div class="payment__packages">
-          <div class="unlimited__title">packages</div>
-          <div class="payment__tariff">
-            <div class="payment__tariff-block block-one">
-              <p>premium 1 day</p>
-              <div class="payment__on-click">0.49$/day</div>
-            </div>
-            <div class="payment__tariff-block block-two">
-              <p>premium 1 week</p>
-              <div class="payment__on-click2">1.99$/week</div>
-            </div>
-            <div class="payment__tariff-block block-three">
-              <p>premium 1 month</p>
-              <div class="payment__on-click3">5.99$/month</div>
-            </div>
+          <div class="payment__tariff-block block-two">
+            <p>premium 1 week</p>
+            <div class="payment__on-click2">1.99$/week</div>
+          </div>
+          <div class="payment__tariff-block block-three">
+            <p>premium 1 month</p>
+            <div class="payment__on-click3">5.99$/month</div>
           </div>
         </div>
       </div>
     </div>
-    <script src="../js/payment.js"></script>
-  </body>
+  </div>
+  <script src="../js/payment.js"></script>
+</body>
+
 </html>

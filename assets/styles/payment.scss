@@ -1,9 +1,12 @@
 @import "../../assets/styles/vars.scss";
+
 * {
     @include reset;
 }
+
 .payment {
     min-height: 100%;
+    font-family: 'Gugi', cursive;
     overflow: hidden;
     @include f-column;
     background: linear-gradient(114.23deg, #594444 14.64%, rgba(0, 0, 0, 0.7) 47.07%, #475f66 80.65%);
@@ -11,52 +14,63 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+
     &__wrapper {
         @include f-column;
         flex-wrap: wrap;
         margin: 0px auto;
         width: 80%;
     }
+
     &__step {
         margin: 5% 15%;
         display: flex;
         gap: 50px;
     }
+
     &__steps {
         display: flex;
         align-items: center;
         gap: 20px;
     }
+
     &__number {
         background: #475f66;
         padding: 15px;
         color: $main-color;
     }
+
     &__text {
         color: $main-color;
         text-transform: uppercase;
+
         &_chosen {
             color: $hover-payment-color;
         }
     }
+
     &__line {
         background-color: white;
         width: 45px;
         height: 5px;
     }
+
     .unlimited {
         margin: 0 50px;
+
         &__title {
             color: #b9b78d;
             text-transform: uppercase;
             text-decoration: underline;
             margin-bottom: 30px;
         }
+
         &__picture {
             @include f-column;
             justify-content: center;
             align-items: start;
         }
+
         &__pic-text {
             text-transform: uppercase;
             margin-top: 10px;
@@ -64,10 +78,12 @@
             text-align: center;
             color: white;
         }
+
         &__main-block {
             display: grid;
             grid-template-columns: 40% 60%;
         }
+
         &__text {
             color: white;
             font-weight: 100;
@@ -76,13 +92,16 @@
             text-align: justify;
         }
     }
+
     &__packages {
         margin: 0 50px;
     }
+
     &__tariff {
         display: flex;
         gap: 30px;
     }
+
     &__tariff-block {
         background-image: url("../images/payment/films-pic.png");
         background-repeat: no-repeat;
@@ -92,10 +111,12 @@
         text-transform: uppercase;
         font-size: 30px;
     }
+
     &__tariff-block:hover {
         transform: scale(1.4);
         cursor: pointer;
     }
+
     &__on-click,
     &__on-click2,
     &__on-click3 {
