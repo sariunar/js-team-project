@@ -1,1 +1,111 @@
-/*# sourceMappingURL=payment.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.payment {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(114.23deg, #594444 14.64%, rgba(0, 0, 0, 0.7) 47.07%, #475f66 80.65%);
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.payment__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0px auto;
+  width: 80%;
+}
+.payment__step {
+  margin: 5% 15%;
+  display: flex;
+  gap: 50px;
+}
+.payment__steps {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.payment__number {
+  background: #475f66;
+  padding: 15px;
+  color: white;
+}
+.payment__text {
+  color: white;
+  text-transform: uppercase;
+}
+.payment__text_chosen {
+  color: #ebff9a;
+}
+.payment__line {
+  background-color: white;
+  width: 45px;
+  height: 5px;
+}
+.payment .unlimited {
+  margin: 0 50px;
+}
+.payment .unlimited__title {
+  color: #b9b78d;
+  text-transform: uppercase;
+  text-decoration: underline;
+  margin-bottom: 30px;
+}
+.payment .unlimited__picture {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+.payment .unlimited__pic-text {
+  text-transform: uppercase;
+  margin-top: 10px;
+  width: 390px;
+  text-align: center;
+  color: white;
+}
+.payment .unlimited__main-block {
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+.payment .unlimited__text {
+  color: white;
+  font-weight: 100;
+  font-size: 30px;
+  line-height: 51px;
+  text-align: justify;
+}
+.payment__packages {
+  margin: 0 50px;
+}
+.payment__tariff {
+  display: flex;
+  gap: 30px;
+}
+.payment__tariff-block {
+  background-image: url("../images/payment/films-pic.png");
+  background-repeat: no-repeat;
+  padding: 50px;
+  border-radius: 50px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+.payment__tariff-block:hover {
+  transform: scale(1.4);
+  cursor: pointer;
+}
+.payment__on-click, .payment__on-click2, .payment__on-click3 {
+  background-color: rgba(0, 0, 255, 0.427);
+  border-radius: 40px;
+  padding: 5px;
+  text-align: center;
+  display: none;
+}/*# sourceMappingURL=payment.css.map */
