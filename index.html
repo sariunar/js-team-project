@@ -10,11 +10,55 @@
 
     <link rel="stylesheet" href="assets/styles/normalize.css">
 
-    <title>Sign Up</title>
+    <title>LogIn</title>
 </head>
 
 <body>
+    <div class="container">
 
+        <form name="form1" id="login__form">
+            <!-- onsubmit="return validateForm(this)" -->
+            <div class="login-form__container">
+                <div class="login-form__wrapper">
+                    <span class="login-form__title">icon here</span>
+
+                    <div class="login-form validate-form">
+
+                        <div class="wrap-input validate-input" data-validate="Enter username">
+                            <input class="input" id="login__input" type="text" name="username" minlength=2
+                                placeholder="Type username" autofocus required>
+                        </div>
+
+                        <div class="wrap-input validate-input" data-validate="Enter password">
+                            <input class="input" id="password__input" type="password" minlength=5 name="password"
+                                placeholder="Type password" required>
+                        </div>
+
+                        <div class="wrap-input validate-input" data-validate="Enter email">
+                            <input class="input" id="email__input" type="email" name="email" placeholder="Type email"
+                                required>
+                        </div>
+
+                        <div class="wrap-input validate-input" data-validate="Enter your phone">
+                            <input class="input" id="phone__input" type="tel" pattern="\d{6,20}" minlength=6
+                                maxlength=20 name="phone number" placeholder="Type your phone" required>
+                        </div>
+
+                        <div class="container-login-form__btn">
+                            <!-- <button class="login-form__btn" type="submin">Sign up</button> -->
+                            <button class="login-form__btn" type="submit">login</button>
+                        </div>
+
+                        <div id="errorMsg" class="errors__info"></div>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+    <script src="js/login.js"></script>
 </body>
 
 </html>
