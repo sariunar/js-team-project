@@ -304,8 +304,8 @@ body {
 .movie__img:hover {
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
-  -webkit-box-shadow: 8px 10px 5px 2px #475F66;
-          box-shadow: 8px 10px 5px 2px #475F66;
+  -webkit-box-shadow: 8px 10px 5px 2px #b2c0c0;
+          box-shadow: 8px 10px 5px 2px #b2c0c0;
 }
 
 .movie__year, .movie__rating {
