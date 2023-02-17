@@ -1,15 +1,21 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .payment {
   min-height: 100%;
   font-family: "Gugi", cursive;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background: linear-gradient(114.23deg, #594444 14.64%, rgba(0, 0, 0, 0.7) 47.07%, #475f66 80.65%);
   height: 100vh;
   background-size: cover;
@@ -17,20 +23,32 @@
   background-position: center center;
 }
 .payment__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0px auto;
   width: 80%;
 }
 .payment__step {
   margin: 5% 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 50px;
 }
 .payment__steps {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 20px;
 }
 .payment__number {
@@ -60,10 +78,19 @@
   margin-bottom: 30px;
 }
 .payment .unlimited__picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
 }
 .payment .unlimited__pic-text {
   text-transform: uppercase;
@@ -87,6 +114,8 @@
   margin: 0 50px;
 }
 .payment__tariff {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 30px;
 }
@@ -100,7 +129,8 @@
   font-size: 30px;
 }
 .payment__tariff-block:hover {
-  transform: scale(1.4);
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
   cursor: pointer;
 }
 .payment__on-click, .payment__on-click2, .payment__on-click3 {

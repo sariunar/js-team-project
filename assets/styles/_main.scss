@@ -1,0 +1,106 @@
+@import "../../assets/styles/vars.scss";
+body{
+    background: linear-gradient(114.23deg, #594444 14.64%, rgba(0, 0, 0, 0.7) 47.07%, #475F66 80.65%);
+}
+.slideshow__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    margin: 40px;
+    margin-bottom: 0;
+    position: relative;
+    font-family: 'Gugi', cursive;
+    font-style: normal;
+    font-weight: 250;
+    font-size: 30px;
+    line-height: 52px;
+    color: #FFFFFF;
+}
+.slideshow__img{
+    width: 100%;
+}
+.slideshow__text{
+    position: absolute;
+    padding: 8px 12px;
+    margin-top: -80px;
+    left: 5%;
+}
+.dots{
+    text-align:center;
+    margin-bottom: 30px;
+}
+.dot {
+    cursor: pointer;
+    top: 848px;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #7D7373;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;        
+}    
+.active, .dot:hover {
+    background-color: #97A7AC;
+}
+.arrow {
+    cursor: pointer;
+    position: absolute;
+    width: auto;
+    padding: 26px;
+    margin-top: -30px;
+    color: #7D7373;
+    font-size: 60px;
+    transition: 0.6s ease;
+}
+.next {
+    right: -1%;
+}
+.prev{
+    left: -1%;
+}
+.movies{
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Gugi', cursive;
+    font-style: normal;
+    font-weight: 250;
+    color: #FFFFFF;
+}
+.movie__title{
+    width: 15%;
+    text-align: center;
+    font-size: 30px;
+    line-height: 52px;
+    margin-left: 40px;
+    background-color: rgba(9, 7, 7, 0.64);
+    border-radius: 15px;
+}
+.movies__anime, .movies__popular, .movies__fantastika, .movies__drama{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    margin: 30px;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+}
+.movie{
+    width: 100%;
+}
+.movie__img{
+    height: 300px;
+    position: relative;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.movie__img:hover{
+    transform: translateY(-10px);
+    box-shadow: 8px 10px 5px 2px #475F66;
+}
+.movie__year, .movie__rating{
+    font-size: 15px;
+    line-height: 26px;
+    margin: 0;
+}
