@@ -1,20 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles/normalize.css" />
     <link rel="stylesheet" href="../assets/styles/app.css">
-
-    <link rel="stylesheet" href="../assets/styles/normalize.css">
-
     <title>Document</title>
 </head>
-
 <body>
-
+    <div class="container">
+        <div class="slideshow">
+            <div class="slideshow__container">
+                <div class="slideshow__slides">
+                    <img src="../assets/images/movie/home1.png" alt="" class="slideshow__img">
+                    <p class="slideshow__text">Доктор Стрэндж: В мультивселенной безумия</p>
+                </div>
+                <div class="slideshow__slides">
+                    <img src="../assets/images/movie/home3.png" alt="" class="slideshow__img">
+                    <p class="slideshow__text">Смерть на Ниле</p>
+                </div>
+                <div class="slideshow__slides">
+                    <img src="../assets/images/movie/home4.png" alt="" class="slideshow__img">
+                    <p class="slideshow__text">Я краснею</p>
+                </div>
+                <div class="slideshow__slides">
+                    <img src="../assets/images/movie/home5.png" alt="" class="slideshow__img">
+                    <p class="slideshow__text">Ведьмак</p>
+                </div>
+                <a class="arrow prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="arrow next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </div>
+        <div class="movies">
+            <h2 class="movie__title">Популярное</h2>
+            <div class="movies__popular"></div>
+            <h2 class="movie__title">Аниме</h2>
+            <div class="movies__anime"></div>
+            <h2 class="movie__title">Фантастика</h2>
+            <div class="movies__fantastika"></div>
+            <h2 class="movie__title">Драма</h2>
+            <div class="movies__drama"></div>
+        </div>
+    </div>
+    <script src="../js/movie.js"></script>
 </body>
-
 </html>

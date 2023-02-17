@@ -12,6 +12,7 @@ body {
 
 .main {
   display: grid;
+  grid-template-rows: repeat(3, -webkit-max-content);
   grid-template-rows: repeat(3, max-content);
   row-gap: 60px;
 }
@@ -29,7 +30,8 @@ h2 {
 
 * {
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* means that all the things inside have internal limits in order to hide y-scroll */
 }
 
@@ -43,10 +45,17 @@ h2 {
   width: 100%;
   min-height: 100vh;
   /*     ELEMS-POSITIONING    */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 15px;
   /*      BG-POSITIONING     */
   background: #2D474F;
@@ -94,14 +103,20 @@ h2 {
   height: 20px;
   background: 0 0;
   padding: 0 10px 0 80px;
+  -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 
 .container-login-form__btn {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 20px;
 }
 .container-login-form__btn .login-form__btn {
@@ -109,9 +124,15 @@ h2 {
   color: #2D474F;
   line-height: 1.2;
   text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0 20px;
   min-width: 130px;
   height: 42px;
@@ -150,22 +171,167 @@ textarea {
   font-weight: 500;
   font-style: italic;
   color: rgb(127, 3, 3);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body {
+  background: linear-gradient(114.23deg, #594444 14.64%, rgba(0, 0, 0, 0.7) 47.07%, #475F66 80.65%);
+}
+
+.slideshow__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 100%;
+  margin: 40px;
+  margin-bottom: 0;
+  position: relative;
+  font-family: "Gugi", cursive;
+  font-style: normal;
+  font-weight: 250;
+  font-size: 30px;
+  line-height: 52px;
+  color: #FFFFFF;
+}
+
+.slideshow__img {
+  width: 100%;
+}
+
+.slideshow__text {
+  position: absolute;
+  padding: 8px 12px;
+  margin-top: -80px;
+  left: 5%;
+}
+
+.dots {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.dot {
+  cursor: pointer;
+  top: 848px;
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #7D7373;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #97A7AC;
+}
+
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  width: auto;
+  padding: 26px;
+  margin-top: -30px;
+  color: #7D7373;
+  font-size: 60px;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+}
+
+.next {
+  right: -1%;
+}
+
+.prev {
+  left: -1%;
+}
+
+.movies {
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Gugi", cursive;
+  font-style: normal;
+  font-weight: 250;
+  color: #FFFFFF;
+}
+
+.movie__title {
+  width: 15%;
+  text-align: center;
+  font-size: 30px;
+  line-height: 52px;
+  margin-left: 40px;
+  background-color: rgba(9, 7, 7, 0.64);
+  border-radius: 15px;
+}
+
+.movies__anime, .movies__popular, .movies__fantastika, .movies__drama {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  margin: 30px;
+  gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+}
+
+.movie {
+  width: 100%;
+}
+
+.movie__img {
+  height: 300px;
+  position: relative;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.movie__img:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-box-shadow: 8px 10px 5px 2px #475F66;
+          box-shadow: 8px 10px 5px 2px #475F66;
+}
+
+.movie__year, .movie__rating {
+  font-size: 15px;
+  line-height: 26px;
+  margin: 0;
 }
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .payment {
   min-height: 100%;
   font-family: "Gugi", cursive;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background: linear-gradient(114.23deg, #594444 14.64%, rgba(0, 0, 0, 0.7) 47.07%, #475f66 80.65%);
   height: 100vh;
   background-size: cover;
@@ -173,20 +339,32 @@ textarea {
   background-position: center center;
 }
 .payment__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0px auto;
   width: 80%;
 }
 .payment__step {
   margin: 5% 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 50px;
 }
 .payment__steps {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 20px;
 }
 .payment__number {
@@ -216,10 +394,19 @@ textarea {
   margin-bottom: 30px;
 }
 .payment .unlimited__picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
 }
 .payment .unlimited__pic-text {
   text-transform: uppercase;
@@ -243,6 +430,8 @@ textarea {
   margin: 0 50px;
 }
 .payment__tariff {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 30px;
 }
@@ -256,7 +445,8 @@ textarea {
   font-size: 30px;
 }
 .payment__tariff-block:hover {
-  transform: scale(1.4);
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
   cursor: pointer;
 }
 .payment__on-click, .payment__on-click2, .payment__on-click3 {
