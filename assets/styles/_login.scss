@@ -2,6 +2,11 @@
 
 @import "../../assets/styles/vars.scss";
 
+@font-face {
+    font-family: "BELLABIO";
+    src: url(../fonts/Bellabio/Bellabio\ Regular.ttf);
+}
+
 html {
     font-family: 'Gugi', cursive;
     max-width: 1600px;
@@ -76,6 +81,26 @@ h2 {
             text-align: center;
             text-transform: uppercase;
             display: block;
+
+            .login-form__picture {
+
+                .logo-img {
+                    max-width: 30%;
+                }
+
+                .logo-img__text {
+                    font-family: BELLABIO;
+                    color: $main-color;
+                    font-weight: 600;
+                    font-size: 21px;
+                    font-style: italic;
+                    text-transform: none;
+                    line-height: 20px;
+                    margin-top: 15px;
+                    text-align: center;
+                    width: 100%;
+                }
+            }
         }
     }
 }
