@@ -41,16 +41,12 @@ button.addEventListener('click', ()=>{
         checkValidity(input);
     }
 
-    if (!document.getElementById("login__input").value.match(regexp)) {
-        errors.push(`${document.getElementById("login__input").name} некорректно`);
-    }
-
 	//выводим ошибки в div 
     let errorDiv = document.querySelector('.errors__info');
     errorDiv.innerHTML = errors.join('\n');
 
     if (errors.length == 0) {
-        alert(`Welcome, ${document.getElementById("login__input").value}`);
+        alert(`Welcome, ${document.getElementById("email__input").value}`);
         location.reload(); //перезагружаем страницу, если всё введено корректно, 
         //чтобы очистить поля для дальнейшего ввода
     }
