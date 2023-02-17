@@ -1,77 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/styles/payment.css" />
 
-  <link rel="stylesheet" href="../assets/styles/payment.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gugi&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles/normalize.css" />
 
-  <link rel="stylesheet" href="../assets/styles/normalize.css" />
+    <title>Document</title>
+  </head>
 
-  <title>Document</title>
-</head>
-
-<body>
-  <div class="payment">
-    <div class="payment__wrapper">
-      <div class="payment__step">
-        <div class="payment__steps">
-          <div class="payment__number">1</div>
-          <div class="payment__text payment__text_chosen">
-            choose a package
+  <body>
+    <div class="payment">
+      <div class="payment__wrapper">
+        <div class="payment__step">
+          <div class="payment__steps step-one">
+            <div class="payment__number">1</div>
+            <div class="payment__text payment__text_one payment__text_chosen">
+              choose a package
+            </div>
+            <div class="payment__line"></div>
           </div>
-          <div class="payment__line"></div>
-        </div>
-        <div class="payment__steps">
-          <div class="payment__number">2</div>
-          <div class="payment__text">choose a Mode of payment</div>
-          <div class="payment__line"></div>
-        </div>
-        <div class="payment__steps">
-          <div class="payment__number">3</div>
-          <div class="payment__text">enjoy movibe 100%</div>
-        </div>
-      </div>
-      <div class="payment__unlimited unlimited">
-        <div class="unlimited__title">Advanced premium</div>
-        <div class="unlimited__main-block">
-          <div class="unlimited__picture">
-            <img src="../assets/images/payment/payment-pop-corn.png" alt="" />
-            <p class="unlimited__pic-text">unlimited access</p>
+          <div class="payment__steps">
+            <div class="payment__number">2</div>
+            <div class="payment__text payment__text_two">
+              choose a Mode of payment
+            </div>
+            <div class="payment__line"></div>
           </div>
-          <div class="unlimited__text">
-            Watch movies unlimits. You can access all contents, movies
-            currently available on Movibe. No need to watch ads, no
-            interruptions.
+          <div class="payment__steps">
+            <div class="payment__number">3</div>
+            <div class="payment__text">enjoy movibe 100%</div>
           </div>
         </div>
-      </div>
-      <div class="payment__packages">
-        <div class="unlimited__title">packages</div>
-        <div class="payment__tariff">
-          <div class="payment__tariff-block block-one">
-            <p>premium 1 day</p>
-            <div class="payment__on-click">0.49$/day</div>
+        <div class="payment__invisible">
+          <div class="payment__unlimited unlimited">
+            <div class="unlimited__title">Advanced premium</div>
+            <div class="unlimited__main-block">
+              <figure class="unlimited__picture">
+                <img
+                  class="unlimited__picture-one"
+                  src="../assets/images/payment/payment-pop-corn.png"
+                  alt=""
+                />
+                <figcaption class="unlimited__pic-text">
+                  unlimited access
+                </figcaption>
+              </figure>
+              <div class="unlimited__text">
+                Watch movies unlimits. You can access all contents, movies
+                currently available on Movibe. No need to watch ads, no
+                interruptions.
+              </div>
+            </div>
           </div>
-          <div class="payment__tariff-block block-two">
-            <p>premium 1 week</p>
-            <div class="payment__on-click2">1.99$/week</div>
+          <div class="payment__packages">
+            <div class="unlimited__title">packages</div>
+            <div class="payment__tariff">
+              <div class="payment__tariff-block block-one">
+                <p>premium 1 day</p>
+                <div class="payment__on-click">0.49$/day</div>
+              </div>
+              <div class="payment__tariff-block block-two">
+                <p>premium 1 week</p>
+                <div class="payment__on-click2">1.99$/week</div>
+              </div>
+              <div class="payment__tariff-block block-three">
+                <p>premium 1 month</p>
+                <div class="payment__on-click3">5.99$/month</div>
+              </div>
+            </div>
           </div>
-          <div class="payment__tariff-block block-three">
-            <p>premium 1 month</p>
-            <div class="payment__on-click3">5.99$/month</div>
+        </div>
+        <div class="payment__second-page second-page">
+          <div class="second-page__wrapper">
+            <div class="second-page__logo">
+              <figure class="second-page__picture">
+                <img
+                  class="unlimited__picture-one"
+                  src="../assets/images/payment/logo.png"
+                  alt="logo"
+                />
+                <figcaption class="second-page__pic-text">
+                  from Vismoff
+                </figcaption>
+              </figure>
+            </div>
+            <div class="second-page__main main-block">
+              <div class="main-block__title">Detail:</div>
+              <div class="main-block__premium-acc">Movie Premium Account</div>
+              <div class="main-block__block">
+                <div class="main-block__package-name">Package name:</div>
+                <div class="main-block__package-name-js"></div>
+              </div>
+              <div class="main-block__block">
+                <div class="main-block__valid-date">Valid date:</div>
+                <div class="main-block__valid-date-js"></div>
+              </div>
+              <div class="main-block__block">
+                <div class="main-block__exp-date">Expiration date:</div>
+                <div class="main-block__exp-date-js"></div>
+              </div>
+              <div class="main-block__block block-total">
+                <div class="main-block__total">Total:</div>
+                <div class="main-block__total-js"></div>
+              </div>
+              <div class="main-block__cards">
+                <div class="main-block__card">
+                  <input type="radio" name="bank-card" id="momo" />
+                  <label class="main-block__label" for="momo">
+                    <img src="../assets/images/payment/momo.png" alt="momo" />
+                  </label>
+                </div>
+                <div class="main-block__card">
+                  <input type="radio" name="bank-card" id="paypal" />
+                  <label class="main-block__label" for="paypal">
+                    <img
+                      src="../assets/images/payment/paypal.png"
+                      alt="paypal"
+                    />
+                  </label>
+                </div>
+                <div class="main-block__card">
+                  <input type="radio" name="bank-card" id="visa" checked />
+                  <label class="main-block__label" for="visa">
+                    <img src="../assets/images/payment/visa.png" alt="visa" />
+                  </label>
+                </div>
+                <div class="main-block__card">
+                  <input type="radio" name="bank-card" id="zalopay" />
+                  <label class="main-block__label" for="zalopay">
+                    <img
+                      src="../assets/images/payment/zalopay.png"
+                      alt="zalopay"
+                    />
+                  </label>
+                </div>
+              </div>
+              <div class="main-block__button">
+                <input
+                  class="main-block__submit"
+                  type="submit"
+                  value="Confirm"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <script src="../js/payment.js"></script>
-</body>
-
+    <script src="../js/payment.js"></script>
+  </body>
 </html>
