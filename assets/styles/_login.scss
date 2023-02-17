@@ -190,11 +190,11 @@ textarea {
 
 
 #errorMsg {
-    font-size: 21px;
+    font-size: 17px;
     font-weight: 500;
-    font-style: italic;
     color: $main-color;
 
     display: flex;
     justify-content: center;
+    margin-top: 12px;
 }
