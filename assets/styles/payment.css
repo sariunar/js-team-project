@@ -1,21 +1,19 @@
+@font-face {
+  font-family: "BELLABIO";
+  src: url(../fonts/Bellabio/Bellabio\ Regular.ttf);
+}
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .payment {
   min-height: 100%;
   font-family: "Gugi", cursive;
   overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   background: linear-gradient(114.23deg, #594444 14.64%, rgba(0, 0, 0, 0.7) 47.07%, #475f66 80.65%);
   height: 100vh;
   background-size: cover;
@@ -23,33 +21,19 @@
   background-position: center center;
 }
 .payment__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   margin: 0px auto;
-  width: 80%;
+  width: 85%;
 }
 .payment__step {
   margin: 5% 15%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  gap: 50px;
+  justify-content: center;
+  gap: 5%;
 }
 .payment__steps {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 20px;
+  align-items: center;
+  gap: 2%;
 }
 .payment__number {
   background: #475f66;
@@ -69,7 +53,7 @@
   height: 5px;
 }
 .payment .unlimited {
-  margin: 0 50px;
+  margin: 0 50px 50px 0;
 }
 .payment .unlimited__title {
   color: #b9b78d;
@@ -78,59 +62,50 @@
   margin-bottom: 30px;
 }
 .payment .unlimited__picture {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  max-width: 100%;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.payment .unlimited__picture-one {
+  max-width: 100%;
 }
 .payment .unlimited__pic-text {
   text-transform: uppercase;
   margin-top: 10px;
-  width: 390px;
   text-align: center;
   color: white;
+  width: 100%;
 }
 .payment .unlimited__main-block {
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 30% 70%;
 }
 .payment .unlimited__text {
+  margin-left: 5%;
   color: white;
   font-weight: 100;
-  font-size: 30px;
+  font-size: 2rem;
   line-height: 51px;
   text-align: justify;
 }
-.payment__packages {
-  margin: 0 50px;
-}
 .payment__tariff {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  gap: 30px;
+  justify-content: space-between;
+  gap: 3%;
 }
 .payment__tariff-block {
   background-image: url("../images/payment/films-pic.png");
   background-repeat: no-repeat;
-  padding: 50px;
+  padding: 5.5%;
   border-radius: 50px;
   color: white;
   text-transform: uppercase;
   font-size: 30px;
 }
 .payment__tariff-block:hover {
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
+  transform: scale(1.2);
   cursor: pointer;
 }
 .payment__on-click, .payment__on-click2, .payment__on-click3 {
@@ -139,4 +114,130 @@
   padding: 5px;
   text-align: center;
   display: none;
+}
+.payment__invisible {
+  display: block;
+}
+
+.second-page {
+  display: none;
+}
+.second-page__wrapper {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+.second-page__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.second-page__main {
+  display: flex;
+}
+.second-page__pic-text {
+  font-family: BELLABIO;
+  color: white;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 91px;
+  margin-top: 10px;
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+.second-page__main {
+  display: flex;
+  flex-direction: column;
+}
+.second-page .main-block {
+  margin-left: 10%;
+}
+.second-page .main-block__title {
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  font-style: normal;
+  font-weight: 250;
+  font-size: 35px;
+  line-height: 70px;
+  text-decoration-line: underline;
+}
+.second-page .main-block__block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.second-page .main-block__blue {
+  font-weight: 250;
+  font-size: 20px;
+  line-height: 52px;
+  color: #68acbf;
+}
+.second-page .main-block__premium-acc {
+  text-transform: uppercase;
+  color: white;
+  font-size: 25px;
+  line-height: 52px;
+}
+.second-page .main-block__premium-acc:after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: white;
+}
+.second-page .main-block__package-name, .second-page .main-block__valid-date, .second-page .main-block__exp-date {
+  margin-left: 5%;
+  text-transform: uppercase;
+  color: white;
+  font-size: 25px;
+  line-height: 52px;
+}
+.second-page .main-block__total {
+  text-transform: uppercase;
+  color: white;
+  font-size: 25px;
+  line-height: 52px;
+}
+.second-page .main-block__cards {
+  margin-top: 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.second-page .main-block .block-total:after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: white;
+  width: 100%;
+}
+.second-page .main-block__card {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.second-page .main-block__label {
+  margin-left: 5%;
+}
+.second-page .main-block__button {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+}
+.second-page .main-block__submit {
+  padding: 1%;
+  outline: none;
+  font-weight: 250;
+  font-size: 25px;
+  letter-spacing: 2px;
+  color: #475f66;
+  line-height: 44px;
+  border: none;
+  border-radius: 40px;
+  background-color: white;
+  text-transform: uppercase;
+}
+.second-page .main-block .main-block__submit:hover {
+  transform: scale(1.2);
+  cursor: pointer;
 }/*# sourceMappingURL=payment.css.map */

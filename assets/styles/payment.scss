@@ -1,12 +1,15 @@
 @import "../../assets/styles/vars.scss";
-
+@font-face {
+    font-family: "BELLABIO";
+    src: url(../fonts/Bellabio/Bellabio\ Regular.ttf);
+}
 * {
     @include reset;
 }
 
 .payment {
     min-height: 100%;
-    font-family: 'Gugi', cursive;
+    font-family: "Gugi", cursive;
     overflow: hidden;
     @include f-column;
     background: linear-gradient(114.23deg, #594444 14.64%, rgba(0, 0, 0, 0.7) 47.07%, #475f66 80.65%);
@@ -16,22 +19,20 @@
     background-position: center center;
 
     &__wrapper {
-        @include f-column;
-        flex-wrap: wrap;
         margin: 0px auto;
-        width: 80%;
+        width: 85%;
     }
 
     &__step {
         margin: 5% 15%;
-        display: flex;
-        gap: 50px;
+        @include flex-center;
+        gap: 5%;
     }
 
     &__steps {
         display: flex;
         align-items: center;
-        gap: 20px;
+        gap: 2%;
     }
 
     &__number {
@@ -56,7 +57,7 @@
     }
 
     .unlimited {
-        margin: 0 50px;
+        margin: 0 50px 50px 0;
 
         &__title {
             color: #b9b78d;
@@ -66,46 +67,50 @@
         }
 
         &__picture {
+            max-width: 100%;
             @include f-column;
             justify-content: center;
-            align-items: start;
+            align-items: center;
         }
-
+        &__picture-one {
+            max-width: 100%;
+        }
         &__pic-text {
             text-transform: uppercase;
             margin-top: 10px;
-            width: 390px;
             text-align: center;
             color: white;
+            width: 100%;
         }
 
         &__main-block {
             display: grid;
-            grid-template-columns: 40% 60%;
+            grid-template-columns: 30% 70%;
         }
 
         &__text {
+            margin-left: 5%;
             color: white;
             font-weight: 100;
-            font-size: 30px;
+            font-size: 2rem;
             line-height: 51px;
             text-align: justify;
         }
     }
 
     &__packages {
-        margin: 0 50px;
+        // margin: 0 50px;
     }
 
     &__tariff {
-        display: flex;
-        gap: 30px;
+        @include flex-space-between;
+        gap: 3%;
     }
 
     &__tariff-block {
         background-image: url("../images/payment/films-pic.png");
         background-repeat: no-repeat;
-        padding: 50px;
+        padding: 5.5%;
         border-radius: 50px;
         color: white;
         text-transform: uppercase;
@@ -113,7 +118,7 @@
     }
 
     &__tariff-block:hover {
-        transform: scale(1.4);
+        transform: scale(1.2);
         cursor: pointer;
     }
 
@@ -125,5 +130,133 @@
         padding: 5px;
         text-align: center;
         display: none;
+    }
+    &__invisible {
+        display: block;
+    }
+}
+
+.second-page {
+    display: none;
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+    &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__main {
+        display: flex;
+    }
+    &__pic-text {
+        font-family: BELLABIO;
+        color: white;
+        font-weight: 400;
+        font-size: 50px;
+        line-height: 91px;
+        margin-top: 10px;
+        text-align: center;
+        color: white;
+        width: 100%;
+    }
+    &__main {
+        @include f-column;
+    }
+    .main-block {
+        margin-left: 10%;
+        &__title {
+            text-align: center;
+            text-transform: uppercase;
+            color: white;
+            font-style: normal;
+            font-weight: 250;
+            font-size: 35px;
+            line-height: 70px;
+            text-decoration-line: underline;
+        }
+        &__block {
+            @include flex-space-between;
+            flex-wrap: wrap;
+        }
+        &__blue {
+            font-weight: 250;
+            font-size: 20px;
+            line-height: 52px;
+            color: #68acbf;
+        }
+        &__premium-acc {
+            text-transform: uppercase;
+            color: white;
+            font-size: 25px;
+            line-height: 52px;
+            &:after {
+                content: "";
+                display: block;
+                height: 2px;
+                background: white;
+            }
+        }
+        &__package-name,
+        &__valid-date,
+        &__exp-date {
+            margin-left: 5%;
+            text-transform: uppercase;
+            color: white;
+            font-size: 25px;
+            line-height: 52px;
+        }
+        &__total {
+            text-transform: uppercase;
+            color: white;
+            font-size: 25px;
+            line-height: 52px;
+        }
+        &__cards {
+            margin-top: 5%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+        .block-total {
+            &:after {
+                content: "";
+                display: block;
+                height: 2px;
+                background: white;
+                width: 100%;
+            }
+        }
+        &__card {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+        &__label {
+            margin-left: 5%;
+        }
+        &__button {
+            margin-top: 5%;
+            @include flex-center;
+        }
+        &__submit {
+            padding: 1%;
+            outline: none;
+            font-weight: 250;
+            font-size: 25px;
+            letter-spacing: 2px;
+            color: #475f66;
+            line-height: 44px;
+            border: none;
+            border-radius: 40px;
+            background-color: white;
+            text-transform: uppercase;
+        }
+        .main-block__submit:hover {
+            transform: scale(1.2);
+            cursor: pointer;
+        }
     }
 }
