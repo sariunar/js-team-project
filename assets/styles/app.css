@@ -164,12 +164,12 @@ textarea {
 
 /*     CURSOR-SETTINGS    */
 #errorMsg {
-  font-size: 21px;
+  font-size: 17px;
   font-weight: 500;
-  font-style: italic;
   color: white;
   display: flex;
   justify-content: center;
+  margin-top: 12px;
 }
 
 body {
@@ -411,7 +411,7 @@ body {
   text-align: center;
   display: none;
 }
-.payment__invisible {
+.payment__first-step {
   display: block;
 }
 
