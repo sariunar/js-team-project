@@ -157,6 +157,7 @@ h2 {
 }
 .login-form .wrap-input.validate-input .input:focus::-webkit-input-placeholder {
   color: transparent;
+  -webkit-transition: 500ms;
   transition: 500ms;
 }
 
@@ -412,10 +413,10 @@ body {
   max-width: 100%;
 }
 .payment .unlimited__pic-text {
+  color: white;
   text-transform: uppercase;
   margin-top: 10px;
   text-align: center;
-  color: white;
   width: 100%;
 }
 .payment .unlimited__main-block {
@@ -498,8 +499,8 @@ body {
 }
 .second-page .main-block__title {
   text-align: center;
-  text-transform: uppercase;
   color: white;
+  text-transform: uppercase;
   font-style: normal;
   font-weight: 250;
   font-size: 35px;
@@ -518,8 +519,8 @@ body {
   color: #68acbf;
 }
 .second-page .main-block__premium-acc {
-  text-transform: uppercase;
   color: white;
+  text-transform: uppercase;
   font-size: 25px;
   line-height: 52px;
 }
@@ -531,14 +532,14 @@ body {
 }
 .second-page .main-block__package-name, .second-page .main-block__valid-date, .second-page .main-block__exp-date {
   margin-left: 5%;
-  text-transform: uppercase;
   color: white;
+  text-transform: uppercase;
   font-size: 25px;
   line-height: 52px;
 }
 .second-page .main-block__total {
-  text-transform: uppercase;
   color: white;
+  text-transform: uppercase;
   font-size: 25px;
   line-height: 52px;
 }
@@ -557,7 +558,7 @@ body {
 }
 .second-page .main-block__card {
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
 }
 .second-page .main-block__label {
@@ -656,7 +657,10 @@ input[type=text] {
   border-color: rgba(128, 128, 128, 0.345) !important;
 }
 
-.inputbox #input__border {
+.inputbox #input__border,
+.inputbox #input__border2,
+.inputbox #input__border3,
+.inputbox #input__border4 {
   border: 1px solid red;
 }
 
@@ -671,15 +675,14 @@ form a :hover {
   text-decoration: none;
 }
 form .row-1 {
-  border: 1px solid rgba(0, 0, 0, 0.137);
+  border: 1px solid rgba(221, 228, 236, 0.459);
+  margin: 2vh 0;
   padding: 0.5rem;
   outline: none;
   width: 100%;
   min-width: unset;
   border-radius: 5px;
   background-color: rgba(221, 228, 236, 0.301);
-  border-color: rgba(221, 228, 236, 0.459);
-  margin: 2vh 0;
   overflow: hidden;
 }
 form .row-2 {
