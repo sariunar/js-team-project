@@ -13,7 +13,7 @@
     overflow: hidden;
     @include f-column;
     background: linear-gradient(114.23deg, #594444 14.64%, rgba(0, 0, 0, 0.7) 47.07%, #475f66 80.65%);
-    height: 100vh;
+    min-width: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -24,7 +24,7 @@
     }
 
     &__step {
-        margin: 5% 15%;
+        margin: 2% 15%;
         @include flex-center;
         gap: 5%;
     }
@@ -99,7 +99,7 @@
     }
 
     &__packages {
-        // margin: 0 50px;
+        margin-bottom: 100px;
     }
 
     &__tariff {
@@ -140,6 +140,7 @@
     display: none;
 
     &__wrapper {
+        margin-bottom: 5%;
         display: grid;
         grid-template-columns: 30% 70%;
     }
