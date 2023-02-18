@@ -2,7 +2,10 @@
 
 let button = document.querySelector(".login-form__btn");
 let form = document.querySelector('#login__form');
+let inputField = document.querySelectorAll('input');
 let errors = [];
+
+console.log(inputField);
 
 //Проверка для каждого поля (поля получаем по одному в функции ниже в цикле)
 function checkValidity(input) {
@@ -51,8 +54,9 @@ button.addEventListener('click', ()=>{
 
     if (errors.length == 0) {
         alert(`Welcome, ${document.getElementById("email__input").value}`);
-        location.reload(); //перезагружаем страницу, если всё введено корректно, 
+        location.reload();//перезагружаем страницу, если всё введено корректно, 
         //чтобы очистить поля для дальнейшего ввода
+        window.location.href = '../htmls/main.html';
     }
 
     errors = []; //чистим массив

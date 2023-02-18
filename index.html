@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="assets/styles/app.css">
 
-    <link rel="stylesheet" type="text/css" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +22,7 @@
 <body>
     <div class="container">
 
-        <form name="form1" id="login__form">
+        <form name="form1" id="login__form" onsubmit="return false" action="">
             <div class="login-form__container">
                 <div class="login-form__wrapper">
 
@@ -37,15 +37,29 @@
 
                     <div class="login-form validate-form">
 
-                        <div class="wrap-input validate-input" data-validate="Enter email">
+                        <div class="social-nets facebook-connection">
+                            <img src="/assets/icons/facebook.png" alt="facebook" class="social-img" />
+                            <span class="social-nets__text">continue with facebook</span>
+                        </div>
+
+                        <div class="social-nets google-connection">
+                            <img src="/assets/icons/google.png" alt="google" class="social-img" />
+                            <span class="social-nets__text">continue with google</span>
+                        </div>
+
+                        <hr class="above-input line">
+
+                        <div class="wrap-input validate-input first" data-validate="Enter email">
                             <input class="input" id="email__input" type="email" name="email" placeholder="Your email"
                                 required>
                         </div>
 
-                        <div class="wrap-input validate-input" data-validate="Enter password">
+                        <div class="wrap-input validate-input second" data-validate="Enter password">
                             <input class="input" id="password__input" type="password" minlength=5 name="password"
                                 placeholder="Password" required>
                         </div>
+
+                        <span class="under-wrap help-text">Need help?</span>
 
                         <div class="container-login-form__btn">
                             <button class="login-form__btn" type="submit">login</button>
