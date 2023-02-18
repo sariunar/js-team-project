@@ -134,3 +134,9 @@ paymentBlock3.addEventListener('click', function(){
 
 // 
 const buttonConfirm = document.querySelector('.main-block__submit')
+
+buttonConfirm.addEventListener('click', function(){
+    document.querySelector(".main-block__bank-card").style.display = "block"
+})
+
+// aria-selected="false"
