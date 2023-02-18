@@ -1,4 +1,5 @@
 /*      GENERAL     */
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@200&display=swap");
 @font-face {
   font-family: "BELLABIO";
   src: url(../fonts/Bellabio/Bellabio\ Regular.ttf);
@@ -91,20 +92,59 @@ h2 {
   width: 100%;
   padding: 5px 0 5px 0;
 }
-
-.wrap-input {
+.login-form .social-nets {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.login-form .social-nets .social-img {
+  width: 5%;
+}
+.login-form .social-nets .social-nets__text {
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.login-form .above-input {
+  margin: 30px 0;
+}
+.login-form .above-input.line {
+  height: 2px;
+  border: none;
+  background-color: white;
+}
+.login-form .under-wrap {
+  color: white;
+  font-family: "Jost", sans-serif;
+  padding: 0;
+}
+.login-form .help-text {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 25px;
+}
+.login-form .help-text:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.login-form .wrap-input {
   width: 90%;
   margin: auto;
   background: white;
   padding: 10px 0;
   border-radius: 10px;
 }
-.wrap-input.validate-input {
-  margin-bottom: 20px;
+.login-form .wrap-input.validate-input {
+  margin-bottom: 25px;
   position: relative;
 }
-
-.input {
+.login-form .wrap-input.validate-input.second {
+  margin-bottom: 15px;
+}
+.login-form .wrap-input.validate-input .input {
   font-size: 14px;
   font-weight: 300;
   color: rgb(4, 55, 0);
@@ -115,13 +155,17 @@ h2 {
   padding: 0 10px 0 60px;
   transition: all 0.4s;
 }
+.login-form .wrap-input.validate-input .input:focus::-webkit-input-placeholder {
+  color: transparent;
+  transition: 500ms;
+}
 
 .container-login-form__btn {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 0px;
 }
 .container-login-form__btn .login-form__btn {
   font-size: 16px;
@@ -311,7 +355,7 @@ body {
   display: flex;
   flex-direction: column;
   background: linear-gradient(114.23deg, #594444 14.64%, rgba(0, 0, 0, 0.7) 47.07%, #475f66 80.65%);
-  height: 100vh;
+  min-width: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -321,7 +365,7 @@ body {
   width: 85%;
 }
 .payment__step {
-  margin: 5% 15%;
+  margin: 2% 15%;
   display: flex;
   justify-content: center;
   gap: 5%;
@@ -386,6 +430,9 @@ body {
   line-height: 51px;
   text-align: justify;
 }
+.payment__packages {
+  margin-bottom: 100px;
+}
 .payment__tariff {
   display: flex;
   justify-content: space-between;
@@ -419,6 +466,7 @@ body {
   display: none;
 }
 .second-page__wrapper {
+  margin-bottom: 5%;
   display: grid;
   grid-template-columns: 30% 70%;
 }
