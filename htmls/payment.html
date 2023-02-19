@@ -155,8 +155,8 @@
                   </label>
                 </div>
                 <div class="main-block__card">
-                  <input type="radio" name="bank-card" id="paypal" />
-                  <label class="main-block__label" for="paypal">
+                  <input type="radio" name="bank-card" id="paypals" />
+                  <label class="main-block__label" for="paypals">
                     <img
                       src="../assets/images/payment/paypal.png"
                       alt="paypal"
@@ -201,13 +201,13 @@
                       <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
                           <a
-                            class="nav-link active"
+                            class="nav-link"
                             id="visa-tab"
                             data-toggle="tab"
                             href="#visa"
                             role="tab"
                             aria-controls="visa"
-                            aria-selected="true"
+                            aria-selected="false"
                           >
                             <img
                               src="https://i.imgur.com/sB4jftM.png"
@@ -300,6 +300,7 @@
                                   class="form-control"
                                   id="input__border"
                                   required="required"
+                                  placeholder="JOHN WICK"
                                 />
                                 <span>Cardholder Name</span>
                               </div>
@@ -312,12 +313,13 @@
                                   class="form-control"
                                   required="required"
                                   id="input__border2"
+                                  placeholder="4000000000000000"
                                 />
                                 <span>Card Number</span>
                                 <i class="fa fa-eye"></i>
                               </div>
                               <div
-                                class="d-flex flex-row justify-content-between"
+                                class="d-flex flex-row justify-content-between gap-3"
                               >
                                 <div class="inputbox">
                                   <input
@@ -328,6 +330,7 @@
                                     class="form-control"
                                     required="required"
                                     id="input__border3"
+                                    placeholder="00/0000"
                                   />
                                   <span>Expiration Date</span>
                                 </div>
@@ -340,10 +343,12 @@
                                     class="form-control"
                                     required="required"
                                     id="input__border4"
+                                    placeholder="***"
                                   />
                                   <span>CVV</span>
                                 </div>
                               </div>
+                              <div class="payment-errors"></div>
                               <div class="px-5 pay">
                                 <button
                                   class="btn btn-success btn-block bank__button-confirm"
@@ -354,7 +359,7 @@
                             </div>
                           </div>
                         </div>
-                        <div
+                        <!-- <div
                           class="tab-pane fade"
                           id="paypal"
                           role="tabpanel"
@@ -376,7 +381,7 @@
                               </button>
                             </div>
                           </div>
-                        </div>
+                        </div> -->
                       </div>
                     </div>
                   </div>

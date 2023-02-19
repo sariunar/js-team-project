@@ -275,6 +275,7 @@
 .modal__wrapper {
     padding: 3%;
     border-radius: 50px;
+    box-shadow: 14px 16px 100px 18px #68acbf;
     // background-color: #2d474f;
 }
 
@@ -431,7 +432,6 @@ form {
     box-shadow: none;
     outline: none;
     box-shadow: none;
-    color: white;
     transition: none;
 }
 .btn:hover {
@@ -439,6 +439,13 @@ form {
     background-color: $payment-grey-color;
 }
 
+.payment-errors__style {
+    background-color: rgb(49, 15, 219);
+    border-radius: 5px;
+    width: 80%;
+    color: white;
+    transition: background-color 2s ease-out;
+}
 @media (max-width: 767px) {
     .card {
         width: 90%;
