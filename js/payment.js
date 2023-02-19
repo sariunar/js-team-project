@@ -133,10 +133,148 @@ paymentBlock3.addEventListener('click', function(){
 
 
 // 
-const buttonConfirm = document.querySelector('.main-block__submit')
+// const buttonConfirm = document.querySelector('.main-block__submit')
 
-buttonConfirm.addEventListener('click', function(){
-    document.querySelector(".main-block__bank-card").style.display = "block"
-})
+// buttonConfirm.addEventListener('click', function(){
+//     document.querySelector(".main-block__bank-card").style.display = "block"
+// })
 
 // aria-selected="false"
+
+
+
+//выбираем платежную систему
+
+const momoPay = document.getElementById('momo');
+const paypalPay = document.getElementById('paypals');
+const visaPay = document.getElementById('visa');
+const zaloPay = document.getElementById('zalopay');
+
+const pays = [momoPay,paypalPay,visaPay,zaloPay]
+
+const visaTab = document.getElementById('visa-tab')
+const paypalTab = document.getElementById('paypal-tab')
+const momoTab = document.getElementById('momo-tab')
+const zalopayTab = document.getElementById('zalopay-tab')
+const tabs = [visaTab,paypalTab,momoTab,zalopayTab]
+
+const buttonConfirm = document.querySelector('.main-block__submit')
+
+function clearSelected(){
+    momoTab.ariaSelected="false";
+    momoTab.classList.remove('active')
+    paypalTab.ariaSelected= "false";
+    paypalTab.classList.remove('active')
+    zalopayTab.ariaSelected= "false";
+    zalopayTab.classList.remove('active')
+    visaTab.ariaSelected= "false";
+    visaTab.classList.remove('active')
+
+}
+
+buttonConfirm.addEventListener('click', function(){
+    clearSelected()
+if (momoPay.checked ) {
+    momoTab.ariaSelected= "true";
+    momoTab.classList.add('active')
+}
+else if (paypalPay.checked ) {
+    paypalTab.ariaSelected= "true";
+    paypalTab.classList.add('active')
+}
+else if (zaloPay.checked ) {
+    zalopayTab.ariaSelected= "true";
+    zalopayTab.classList.add('active')
+}
+else if (visaPay.checked ) {
+    visaTab.ariaSelected= "true";
+    visaTab.classList.add('active')
+}
+})
+
+//выделяются все
+// Array.from(pays).forEach((elem) => {
+//     if (elem.checked) {
+//         Array.from(tabs).forEach((e) => {
+//             e.ariaSelected="true";
+//             e.classList.add('active')
+//         })
+//     }
+// })
+
+
+const confirmPayment = document.querySelector('.bank__button-confirm')
+const inputName =  document.getElementById('input__border')
+const inputCard = document.getElementById('input__border2')
+const ExpDate = document.getElementById('input__border3')
+const cvc =  document.getElementById('input__border4')
+const paymentErrors = document.querySelector('.payment-errors')
+
+function checkName(inputName) {
+    const letters = /^([a-zA-Z]{2,}\s[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\s?([a-zA-Z]{1,})?)/;
+    if(inputName.value.match(letters)){
+        return true;
+    }
+    else {
+        paymentErrors.classList.add('payment-errors__style')
+        paymentErrors.innerHTML="Введите корректное имя и фамилию"
+        inputName.focus();
+        return false;
+    }
+}
+function checkCard (inputCard) {
+    let cardno = /^(?:4[0-9]{12}(?:[0-9]{3})?)$/;
+    if(inputCard.value.match(cardno))
+            {
+        return true;
+            }
+        else
+            {
+        paymentErrors.classList.add('payment-errors__style')
+        paymentErrors.innerHTML="Неверный номер карты Visa"
+            return false;
+            }
+    }
+function checkExpDate (ExpDate) {
+    let date =/^((0[1-9])|(1[0-2]))\/((2009)|(20[1-2][0-9]))$/;
+    if(ExpDate.value.match(date))
+            {
+        return true;
+            }
+        else
+            {
+                paymentErrors.classList.add('payment-errors__style')
+                paymentErrors.innerHTML="Неверный expiration date"
+            return false;
+            }
+    }
+    function checkCvc (cvc) {
+        let correctCvc =/^[0-9]{3}$/;
+        if(cvc.value.match(correctCvc))
+                {
+            return true;
+                }
+            else
+                {
+                    paymentErrors.classList.add('payment-errors__style')
+                    paymentErrors.innerHTML="Неверный cvc"
+                return false;
+                }
+        }
+confirmPayment.addEventListener('click', function(){
+if (visaTab.classList.contains('active')){
+    if (checkName(inputName)) {
+        if(checkCard(inputCard) ) {
+            if(checkExpDate(ExpDate) ){
+                if(checkCvc(cvc)){
+                    paymentErrors.innerHTML=""
+                    alert (`${inputName.value}, ваша оплата проходит проверку`)
+                }
+            }
+        }
+    }
+    return false;
+}
+}
+)
+
