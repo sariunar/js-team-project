@@ -292,12 +292,12 @@ body {
   left: 5%;
 }
 
-.dots {
+.slideshow__dots {
   text-align: center;
   margin-bottom: 30px;
 }
 
-.dot {
+.slideshow__dot {
   cursor: pointer;
   top: 848px;
   height: 15px;
@@ -310,8 +310,8 @@ body {
   transition: background-color 0.6s ease;
 }
 
-.active,
-.dot:hover {
+.active2,
+.slideshow__dot:hover {
   background-color: #98cada;
 }
 
