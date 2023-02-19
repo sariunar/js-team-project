@@ -24,7 +24,7 @@ function showSlides(n) {
 }
 
 
-
+//API с фильмами
 //EY98ZH1-RBT4RZH-H5BT7MP-KAZT7FJ 
 const API_key = 'EY98ZH1-RBT4RZH-H5BT7MP-KAZT7FJ';
 
@@ -39,17 +39,26 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     <p class="movie__year">Год: ${movie.movies[i].year}</p>
                     <p class="movie__rating">Рейтинг: ${(movie.movies[i].rating.kp).toFixed(1)}</p>
                     <img class = "movie__img" src = ${movie.movies[i].poster.previewUrl}>
-                </div>`
+                    <div class = "movie2">
+                        <div>
+                            <p class="movie__name">${movie.movies[i].name}, ${movie.movies[i].year}</p>
+                            <img class = "movie__img" src = ${movie.movies[i].poster.previewUrl}>
+                            <p class="movie__description">${movie.movies[i].description}</p>
+                            <a href="" class="movie__link">Смотреть</a>
+                        </div>
+                    </div>
+                </div>
+                `
             }
             document.querySelector(".movies__popular").innerHTML = moviesContent;
         })
         .catch(error => console.log(error));
 
 
+
     fetch(`https://api.kinopoisk.dev/movie/?token=${API_key}&field=top250&search=!null&field=genres.name&search=%D0%B0%D0%BD%D0%B8%D0%BC%D0%B5`)
         .then(response => response.json())
         .then(movie => {
-
             moviesContent = "";
             for (let i = 0; i < 5; i++) {
                 moviesContent += `
@@ -57,18 +66,26 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     <p class="movie__year">Год: ${movie.docs[i].year}</p>
                     <p class="movie__rating">Рейтинг: ${(movie.docs[i].rating.kp).toFixed(1)}</p>
                     <img class = "movie__img" src = ${movie.docs[i].poster.previewUrl}>
-                </div>`
+                    
+                    <div class = "movie2">
+                        <div>
+                            <p class="movie__name">${movie.docs[i].name}, ${movie.docs[i].year}</p>
+                            <img class = "movie__img" src = ${movie.docs[i].poster.previewUrl}>
+                            <p class="movie__description">${movie.docs[i].description}</p>
+                            <a href="" class="movie__link">Смотреть</a>
+                        </div>
+                    </div>
+                </div>
+                
+                `
             }
             document.querySelector(".movies__anime").innerHTML = moviesContent;
         })
         .catch(error => console.log(error));
 
-    //https://api.kinopoisk.dev/movie/?token=EY98ZH1-RBT4RZH-H5BT7MP-KAZT7FJ&field=top250&search=!null
-
     fetch(`https://api.kinopoisk.dev/movie/?token=${API_key}&field=top250&search=!null&field=genres.name&search=%D1%84%D0%B0%D0%BD%D1%82%D0%B0%D1%81%D1%82%D0%B8%D0%BA%D0%B0`)
         .then(response => response.json())
         .then(movie => {
-
             moviesContent = "";
             for (let i = 0; i < 5; i++) {
                 moviesContent += `
@@ -76,6 +93,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     <p class="movie__year">Год: ${movie.docs[i].year}</p>
                     <p class="movie__rating">Рейтинг: ${(movie.docs[i].rating.kp).toFixed(1)}</p>
                     <img class = "movie__img" src = ${movie.docs[i].poster.previewUrl}>
+
+                    <div class = "movie2">
+                        <div>
+                            <p class="movie__name">${movie.docs[i].name}, ${movie.docs[i].year}</p>
+                            <img class = "movie__img" src = ${movie.docs[i].poster.previewUrl}>
+                            <p class="movie__description">${movie.docs[i].description}</p>
+                            <a href="" class="movie__link">Смотреть</a>
+                        </div>
+                    </div>
                 </div>`
             }
             document.querySelector(".movies__fantastika").innerHTML = moviesContent;
@@ -85,7 +111,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     fetch(`https://api.kinopoisk.dev/movie/?token=${API_key}&field=top250&search=!null&field=genres.name&search=%D0%B4%D1%80%D0%B0%D0%BC%D0%B0`)
         .then(response => response.json())
         .then(movie => {
-
             moviesContent = "";
             for (let i = 0; i < 5; i++) {
                 moviesContent += `
@@ -93,9 +118,34 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     <p class="movie__year">Год: ${movie.docs[i].year}</p>
                     <p class="movie__rating">Рейтинг: ${(movie.docs[i].rating.kp).toFixed(1)}</p>
                     <img class = "movie__img" src = ${movie.docs[i].poster.previewUrl}>
+
+                    <div class = "movie2">
+                        <div>
+                            <p class="movie__name">${movie.docs[i].name}, ${movie.docs[i].year}</p>
+                            <img class = "movie__img" src = ${movie.docs[i].poster.previewUrl}>
+                            <p class="movie__description">${movie.docs[i].description}</p>
+                            <a href="" class="movie__link">Смотреть</a>
+                        </div>
+                    </div>
                 </div>`
             }
             document.querySelector(".movies__drama").innerHTML = moviesContent;
         })
         .catch(error => console.log(error));
+})
+
+//Модальное окно
+const movieContainer = document.querySelector('.movies');
+movieContainer.addEventListener('click', (event) => {
+    if (event.target.classList.contains('movie__img')) {
+        const parentDiv = event.target.parentNode;
+        //console.log(parentDiv)
+        let movie2 = parentDiv.querySelector(".movie2");
+        movie2.style.display = "block";
+        window.onclick = function (event) {
+            if (event.target == movie2) {
+                movie2.style.display = "none";
+            }
+        }
+    }
 })
