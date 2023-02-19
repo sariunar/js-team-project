@@ -5,3 +5,9 @@
 
 ## Subject:
 + Movies
+
+## Includes:
++ API
++ HTML/CSS/Sass/JS
++ JS Validation
++ JS Slider
