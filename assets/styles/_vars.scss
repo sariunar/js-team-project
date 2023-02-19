@@ -1,6 +1,7 @@
 $main-color: white;
 $hover-payment-color: #ebff9a;
 $payment-grey-color: #475f66;
+$facebook-color: #185DAE;
 
 @mixin reset {
     margin: 0;
@@ -12,6 +13,7 @@ $payment-grey-color: #475f66;
     display: flex;
     flex-direction: column;
 }
+
 @mixin flex-center {
     display: flex;
     justify-content: center;
@@ -21,6 +23,7 @@ $payment-grey-color: #475f66;
     display: flex;
     justify-content: space-between;
 }
+
 @mixin uppercase-white {
     color: white;
     text-transform: uppercase;
