@@ -1,7 +1,7 @@
 # JS-team-project
 - First JS team project
 
-`GitHub Pages link:` (will be soon)
+`GitHub Pages link:` https://otter00.github.io/js-team-project/
 
 ## Subject:
 + Movies
