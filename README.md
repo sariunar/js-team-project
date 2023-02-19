@@ -11,3 +11,4 @@
 + HTML/CSS/Sass/JS
 + JS Validation
 + JS Slider
++ Payment modal window
