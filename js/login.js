@@ -5,8 +5,6 @@ let form = document.querySelector('#login__form');
 let inputField = document.querySelectorAll('input');
 let errors = [];
 
-console.log(inputField);
-
 //Проверка для каждого поля (поля получаем по одному в функции ниже в цикле)
 function checkValidity(input) {
     let validity = input.validity;
