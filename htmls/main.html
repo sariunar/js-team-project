@@ -18,25 +18,30 @@
 <body>
 
     <header class="header">
-        <nav>
-            <img src="../assets/images/header/logo.svg" alt="" />
-            <a class="active" href="#">CATEGORIES</a>
-            <a href="#">COUNTRIES</a>
-            <a href="#">TV SERIES</a>
-            <a href="#">MOVIES</a>
-
-
-            <div class="search-box">
-                <form action="#">
-                    <input type="text" placeholder="___________________________" name="search">
-                    <button type="submit"><img src="../assets/images/header/search.svg" alt="" width="50%"></button>
-                </form>
+        <div class="header__container">
+            <div class="header__body">
+                <a href="#" class="header__logo" alt="">
+                    <img class="logo" src="../assets/images/header/logo.svg" alt="" /></a>
+                <div class="header__burger"><span class="header__burger_Span"></span></div>
+                <nav class="header__menu">
+                    <ul class="header__list">
+                        <li><a class="header__link" href="#">CATEGORIES</a></li>
+                        <li><a class="header__link" href="#">COUNTRIES</a></li>
+                        <li><a class="header__link" href="#">TV SERIES</a></li>
+                        <li><a class="header__link" href="#">MOVIES</a></li>
+                        <li><a class="header__link" href="../index.html">LOGIN</a></li>
+                        <li><a class="header__link" href="./signup.html">SIGN UP</a></li>
+                        <div class="search-box">
+                            <form action="#">
+                                <input class="search-boxInput" type="text" placeholder="Search" name="search">
+                                <button type="submit"><img src="../assets/images/header/search.svg" alt=""
+                                        width="50%"></button>
+                            </form>
+                        </div>
+                    </ul>
+                </nav>
             </div>
-
-
-            <a href="../index.html">LOGIN</a>
-            <a href="../htmls/signup.html">SIGN UP</a>
-        </nav>
+        </div>
     </header>
 
 
@@ -81,6 +86,8 @@
         </div>
     </div>
     <script src="../js/movie.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="../js/header.js"></script>
 </body>
 
 </html>
