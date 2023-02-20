@@ -3,7 +3,13 @@
 let button = document.querySelector(".login-form__btn");
 let form = document.querySelector('#login__form');
 let inputField = document.querySelectorAll('input');
+let closeButton = document.querySelector('.js-close-button');
+
 let errors = [];
+
+closeButton.addEventListener('click', ()=>{
+    window.location.href = '../htmls/main.html';
+});
 
 //Проверка для каждого поля (поля получаем по одному в функции ниже в цикле)
 function checkValidity(input) {
