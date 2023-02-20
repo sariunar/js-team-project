@@ -2,7 +2,7 @@
 
 - First JS team project
 
-`GitHub Pages link:` https://otter00.github.io/js-team-project/
+`GitHub Pages link:` 
 
 ## Subject:
 
