@@ -182,6 +182,7 @@ h2 {
 }
 .login-form .wrap-input.validate-input .input:focus::-webkit-input-placeholder {
   color: transparent;
+  -webkit-transition: 500ms;
   transition: 500ms;
 }
 
@@ -453,7 +454,7 @@ body {
   color: white;
   text-transform: uppercase;
 }
-.payment__text_chosen {
+.payment__change-color {
   color: #ebff9a;
 }
 .payment__line {
@@ -697,7 +698,8 @@ body {
 .nav ul {
   list-style-type: none;
   display: flex;
-  padding-inline-start: unset;
+  -webkit-padding-start: unset;
+          padding-inline-start: unset;
   margin-bottom: 6vh;
 }
 .nav li a {
@@ -806,6 +808,7 @@ form .row .col-2 {
   background-color: rgba(221, 228, 236, 0.301);
   border-color: rgba(221, 228, 236, 0.459);
   margin: 2vh 0;
+  width: -moz-fit-content;
   width: fit-content;
   overflow: hidden;
 }

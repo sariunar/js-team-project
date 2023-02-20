@@ -42,12 +42,17 @@
     &__text {
         color: $main-color;
         text-transform: uppercase;
-
         &_chosen {
             color: $hover-payment-color;
+            cursor: pointer;
+        }
+        &_one:hover {
+            cursor: pointer;
         }
     }
-
+    &__change-color {
+        color: #68acbf;
+    }
     &__line {
         background-color: white;
         width: 45px;
@@ -271,6 +276,10 @@
     opacity: 1;
     visibility: visible;
     position: sticky;
+    &__block {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }
 .modal__wrapper {
     padding: 3%;

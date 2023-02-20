@@ -63,7 +63,7 @@
             </div>
             <div class="payment__line"></div>
           </div>
-          <div class="payment__steps">
+          <div class="payment__steps step-two">
             <div class="payment__number">2</div>
             <div class="payment__text payment__text_two">
               choose a Mode of payment
@@ -75,6 +75,7 @@
             <div class="payment__text">enjoy movibe 100%</div>
           </div>
         </div>
+        <div class="payment__step-error"></div>
         <div class="payment__first-step">
           <div class="payment__unlimited unlimited">
             <div class="unlimited__title">Advanced premium</div>
@@ -280,6 +281,7 @@
                           aria-labelledby="visa-tab"
                         >
                           <div class="mt-4 mx-4">
+                            <form name="form" method="post" onsubmit="return false">
                             <div class="text">
                               <div class="card__block">
                                 <div class="card__package-name">
@@ -355,6 +357,7 @@
                                 >
                                   Confirm
                                 </button>
+                              </form>
                               </div>
                             </div>
                           </div>

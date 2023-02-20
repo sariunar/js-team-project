@@ -5,10 +5,10 @@ const paymentBlock3 = document.querySelector('.block-three')
 
 //отображение цены при наведении на блоки
 //----хочу сократить функцию, но тогда при наведении отображаются сразу все три цены, а я хотела отдельно
-let blocks  = [paymentBlock1, paymentBlock2, paymentBlock3]
-let priceOnBlock1 = document.querySelector('.payment__on-click')
-let priceOnBlock2 = document.querySelector('.payment__on-click2')
-let priceOnBlock3 = document.querySelector('.payment__on-click3')
+const blocks  = [paymentBlock1, paymentBlock2, paymentBlock3]
+const priceOnBlock1 = document.querySelector('.payment__on-click')
+const priceOnBlock2 = document.querySelector('.payment__on-click2')
+const priceOnBlock3 = document.querySelector('.payment__on-click3')
 
 for (block of blocks) {
     block.addEventListener('mouseover', function(){
@@ -49,12 +49,16 @@ const packageName = document.querySelector('.main-block__package-name-js')
 const valideDate = document.querySelector('.main-block__valid-date-js')
 const ExpiryDate = document.querySelector('.main-block__exp-date-js');
 const totalSum = document.querySelector('.main-block__total-js');
+const packageNameonPayment = document.querySelector('.card__package-name-js')
+const totalonPayment = document.querySelector('.card__total-js')
 
 
-let today = new Date();
-let tomorrow = new Date(today.getTime() + (24 * 60 * 60 * 1000));
-let oneWeek = new Date(today.getTime() + (7*24 * 60 * 60 * 1000));
-let oneMonth = new Date(today.getTime() + (30*24 * 60 * 60 * 1000));
+// let today = new Date();
+let today = moment()
+
+// let tomorrow = new Date(today.getTime() + (24 * 60 * 60 * 1000));
+// let oneWeek = new Date(today.getTime() + (7*24 * 60 * 60 * 1000));
+// let oneMonth = new Date(today.getTime() + (30*24 * 60 * 60 * 1000));
 
     //возвращаемся к первому шагу и очищаем инпут
     const firstStepBlock = document.querySelector('.payment__first-step')
@@ -62,6 +66,12 @@ let oneMonth = new Date(today.getTime() + (30*24 * 60 * 60 * 1000));
     const stepTwoText = document.querySelector('.payment__text_two')
     const secondStepGo = document.querySelector('.payment__second-step')
     const backTostepOne = document.querySelector('.step-one')
+    const stepTwoError = document.querySelector('.step-two')
+    const errorInStep = document.querySelector('.payment__step-error')
+
+    function clearErrorInput(){
+        errorInStep .innerHTML=''
+    }
 
     backTostepOne.addEventListener('click', function(){
         secondStepGo.style.display = "none";
@@ -74,6 +84,8 @@ let oneMonth = new Date(today.getTime() + (30*24 * 60 * 60 * 1000));
         valideDate.innerHTML ="";
         ExpiryDate.innerHTML="";
         totalSum.innerHTML=""
+        packageNameonPayment.innerHTML='';
+        totalonPayment.innerHTML='';
         }
     
 
@@ -90,58 +102,69 @@ for (let i = 0; i < linesWithColor.length; i++) {
 //наверное можно сократить распределение по пакетам, но я еще не нашла способ
 //первый пакет
 paymentBlock1.addEventListener('click', function(){
+    clearErrorInput()
     clearInput()
     firstStepBlock.style.display = "none";
     stepTwoText.classList.add("payment__text_chosen");
     stepOneText.classList.remove("payment__text_chosen");
     secondStepGo.style.display="block"
+    packageNameonPayment.classList.add('payment__change-color')
+    totalonPayment.classList.add('payment__change-color')
     //все отобразили, заполняем пакет:
     packageName.innerHTML += ` ${packageNames[0]} `
-    valideDate.innerHTML += ` ${today} `
-    ExpiryDate.innerHTML +=  ` ${tomorrow} `
+    valideDate.innerHTML += ` ${today.format('L')} `
+    ExpiryDate.innerHTML +=  ` ${today.add(1, 'days').calendar()} `
     totalSum.innerHTML+= `${tariffs[0]}`
+    packageNameonPayment.innerHTML  += ` ${packageNames[0]} `
+    totalonPayment.innerHTML += `${tariffs[0]}`
+    
 })
 
 // второй пакет
 paymentBlock2.addEventListener('click', function(){
+    clearErrorInput()
     clearInput()
     firstStepBlock.style.display = "none";
     stepTwoText.classList.add("payment__text_chosen");
     stepOneText.classList.remove("payment__text_chosen");
     secondStepGo.style.display="block"
+    packageNameonPayment.classList.add('payment__change-color')
+    totalonPayment.classList.add('payment__change-color')
     //все отобразили, заполняем пакет:
     packageName.innerHTML += ` ${packageNames[1]} `
-    valideDate.innerHTML += ` ${today} `
-    ExpiryDate.innerHTML +=  ` ${oneWeek} `
+    valideDate.innerHTML += ` ${today.format('L')} `
+    ExpiryDate.innerHTML +=  ` ${today.add(7, 'days').calendar()} `
     totalSum.innerHTML+= `${tariffs[1]}`
+    packageNameonPayment.innerHTML  += ` ${packageNames[1]} `
+    totalonPayment.innerHTML += `${tariffs[1]}`
 })
 
 
 //третий пакет
 paymentBlock3.addEventListener('click', function(){
+    clearErrorInput()
     clearInput()
     firstStepBlock.style.display = "none";
     stepTwoText.classList.add("payment__text_chosen");
     stepOneText.classList.remove("payment__text_chosen");
     secondStepGo.style.display="block"
+    packageNameonPayment.classList.add('payment__change-color')
+    totalonPayment.classList.add('payment__change-color')
     //все отобразили, заполняем пакет:
     packageName.innerHTML += ` ${packageNames[2]} `
-    valideDate.innerHTML += ` ${today} `
-    ExpiryDate.innerHTML +=  ` ${oneMonth} `
+    valideDate.innerHTML += ` ${today.format('L')} `
+    ExpiryDate.innerHTML +=  ` ${today.add(1, 'months').calendar()} `
     totalSum.innerHTML+= `${tariffs[2]}`
+    packageNameonPayment.innerHTML  += ` ${packageNames[2]} `
+    totalonPayment.innerHTML += `${tariffs[2]}`
 })
-
-
-// 
-// const buttonConfirm = document.querySelector('.main-block__submit')
-
-// buttonConfirm.addEventListener('click', function(){
-//     document.querySelector(".main-block__bank-card").style.display = "block"
-// })
-
-// aria-selected="false"
-
-
+stepTwoError.addEventListener('click', function(){
+    if (secondStepGo.style.display === "none") {
+        clearErrorInput()
+        errorInStep .innerHTML += "Выберете пакет"
+        errorInStep .classList.add('payment-errors__style')
+    }
+})
 
 //выбираем платежную систему
 
@@ -202,6 +225,7 @@ else if (visaPay.checked ) {
 //     }
 // })
 
+//валидация карты
 
 const confirmPayment = document.querySelector('.bank__button-confirm')
 const inputName =  document.getElementById('input__border')
@@ -261,6 +285,8 @@ function checkExpDate (ExpDate) {
                 return false;
                 }
         }
+
+    //проверяем все условия  и отправляем на сервер методом POST
 confirmPayment.addEventListener('click', function(){
 if (visaTab.classList.contains('active')){
     if (checkName(inputName)) {
@@ -268,13 +294,31 @@ if (visaTab.classList.contains('active')){
             if(checkExpDate(ExpDate) ){
                 if(checkCvc(cvc)){
                     paymentErrors.innerHTML=""
-                    alert (`${inputName.value}, ваша оплата проходит проверку`)
+
+                    let user = {
+                        userName : inputName.value,
+                        userCardNumber: inputCard.value,
+                        userExpirationDate: ExpDate.value,
+                        userCvc: cvc.value
+                        }
+                        console.log(user)
+
+                    fetch('https://httpbin.org/post ', {
+                    method: 'POST',
+                    headers: {
+                        "Content-Type" : "application/json;charset=utf-8"
+                    },
+                    body: JSON.stringify(user)
+                    })
+                    // .then(response => response.JSON())
+                    .then(user => console.log(user))
+            
+                    alert(`${inputName.value}, ваша оплата проходит проверку!`);
+                    return true;
                 }
             }
         }
     }
     return false;
-}
-}
-)
+}})
 
