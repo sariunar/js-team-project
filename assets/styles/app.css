@@ -71,7 +71,15 @@ h2 {
   text-transform: uppercase;
   display: block;
 }
+.login-form__container .login-form__wrapper .login-form__title .login-form__picture .login-form__close-button {
+  display: block;
+  float: right;
+}
+.login-form__container .login-form__wrapper .login-form__title .login-form__picture .login-form__close-button:hover {
+  cursor: pointer;
+}
 .login-form__container .login-form__wrapper .login-form__title .login-form__picture .logo-img {
+  margin-left: 60px;
   max-width: 30%;
 }
 .login-form__container .login-form__wrapper .login-form__title .login-form__picture .logo-img__text {
@@ -93,6 +101,7 @@ h2 {
 }
 .login-form .social-nets {
   display: flex;
+  justify-content: center;
   flex-direction: row;
   align-items: center;
   gap: 20px;
@@ -100,8 +109,6 @@ h2 {
   margin-bottom: 20px;
   padding: 10px;
   border-radius: 20px;
-  display: flex;
-  align-items: center;
 }
 .login-form .social-nets.facebook-connection {
   background-color: #185DAE;
@@ -114,7 +121,6 @@ h2 {
 }
 .login-form .social-nets .social-img {
   width: 5%;
-  margin-left: 70px;
 }
 .login-form .social-nets .social-nets__text {
   color: white;
@@ -156,11 +162,25 @@ h2 {
   text-decoration: underline;
 }
 .login-form .wrap-input {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  align-self: center;
   width: 90%;
   margin: auto;
   background: white;
   padding: 10px 0;
   border-radius: 10px;
+}
+.login-form .wrap-input figure {
+  margin-top: 3px;
+  margin-left: 15px;
+}
+.login-form .wrap-input img {
+  width: 70%;
+}
+.login-form .wrap-input .show-pass:hover {
+  cursor: pointer;
 }
 .login-form .wrap-input.validate-input {
   margin-bottom: 25px;
@@ -172,17 +192,18 @@ h2 {
 .login-form .wrap-input.validate-input .input {
   font-size: 14px;
   font-weight: 300;
-  color: rgb(4, 55, 0);
   display: block;
   width: 100%;
   height: 20px;
   background: 0 0;
-  padding: 0 10px 0 60px;
+  padding: 0 10px 0 8px;
   transition: all 0.4s;
+}
+.login-form .wrap-input.validate-input .input::-webkit-input-placeholder {
+  color: rgba(2, 23, 0, 0.3);
 }
 .login-form .wrap-input.validate-input .input:focus::-webkit-input-placeholder {
   color: transparent;
-  -webkit-transition: 500ms;
   transition: 500ms;
 }
 
@@ -454,8 +475,15 @@ body {
   color: white;
   text-transform: uppercase;
 }
-.payment__change-color {
+.payment__text_chosen {
   color: #ebff9a;
+  cursor: pointer;
+}
+.payment__text_one:hover {
+  cursor: pointer;
+}
+.payment__change-color {
+  color: #68acbf;
 }
 .payment__line {
   background-color: white;
@@ -676,6 +704,10 @@ body {
   visibility: visible;
   position: sticky;
 }
+.card__block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
 .modal__wrapper {
   padding: 3%;
@@ -698,8 +730,7 @@ body {
 .nav ul {
   list-style-type: none;
   display: flex;
-  -webkit-padding-start: unset;
-          padding-inline-start: unset;
+  padding-inline-start: unset;
   margin-bottom: 6vh;
 }
 .nav li a {
@@ -808,7 +839,6 @@ form .row .col-2 {
   background-color: rgba(221, 228, 236, 0.301);
   border-color: rgba(221, 228, 236, 0.459);
   margin: 2vh 0;
-  width: -moz-fit-content;
   width: fit-content;
   overflow: hidden;
 }
