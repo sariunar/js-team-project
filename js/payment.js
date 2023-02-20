@@ -53,8 +53,13 @@ const packageNameonPayment = document.querySelector('.card__package-name-js')
 const totalonPayment = document.querySelector('.card__total-js')
 
 
+//подключаем модуль
+const moment = require('moment');
 // let today = new Date();
-let today = moment()
+let today = moment().format('L')
+let tomorrow = moment().add(1, 'days').calendar()
+let week = moment().add(7, 'days').calendar()
+let month = moment().add(1, 'months').calendar()
 
 // let tomorrow = new Date(today.getTime() + (24 * 60 * 60 * 1000));
 // let oneWeek = new Date(today.getTime() + (7*24 * 60 * 60 * 1000));
@@ -112,8 +117,8 @@ paymentBlock1.addEventListener('click', function(){
     totalonPayment.classList.add('payment__change-color')
     //все отобразили, заполняем пакет:
     packageName.innerHTML += ` ${packageNames[0]} `
-    valideDate.innerHTML += ` ${today.format('L')} `
-    ExpiryDate.innerHTML +=  ` ${today.add(1, 'days').calendar()} `
+    valideDate.innerHTML += ` ${today} `
+    ExpiryDate.innerHTML +=  ` ${tomorrow} `
     totalSum.innerHTML+= `${tariffs[0]}`
     packageNameonPayment.innerHTML  += ` ${packageNames[0]} `
     totalonPayment.innerHTML += `${tariffs[0]}`
@@ -132,8 +137,8 @@ paymentBlock2.addEventListener('click', function(){
     totalonPayment.classList.add('payment__change-color')
     //все отобразили, заполняем пакет:
     packageName.innerHTML += ` ${packageNames[1]} `
-    valideDate.innerHTML += ` ${today.format('L')} `
-    ExpiryDate.innerHTML +=  ` ${today.add(7, 'days').calendar()} `
+    valideDate.innerHTML += ` ${today} `
+    ExpiryDate.innerHTML +=  ` ${week} `
     totalSum.innerHTML+= `${tariffs[1]}`
     packageNameonPayment.innerHTML  += ` ${packageNames[1]} `
     totalonPayment.innerHTML += `${tariffs[1]}`
@@ -152,8 +157,8 @@ paymentBlock3.addEventListener('click', function(){
     totalonPayment.classList.add('payment__change-color')
     //все отобразили, заполняем пакет:
     packageName.innerHTML += ` ${packageNames[2]} `
-    valideDate.innerHTML += ` ${today.format('L')} `
-    ExpiryDate.innerHTML +=  ` ${today.add(1, 'months').calendar()} `
+    valideDate.innerHTML += ` ${today} `
+    ExpiryDate.innerHTML +=  ` ${month} `
     totalSum.innerHTML+= `${tariffs[2]}`
     packageNameonPayment.innerHTML  += ` ${packageNames[2]} `
     totalonPayment.innerHTML += `${tariffs[2]}`
