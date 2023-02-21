@@ -28,6 +28,11 @@
 
                     <div class="login-form__title">
                         <figure class="login-form__picture">
+
+                            <figure class="login-form__close-button">
+                                <img src="assets/icons/close cross.png" alt="close button" class="js-close-button" />
+                            </figure>
+
                             <img class="logo-img" src="assets/images/payment/logo.png" alt="logo" />
                             <figcaption class="logo-img__text">
                                 from Vismoff
@@ -50,22 +55,35 @@
                         <hr class="above-input line">
 
                         <div class="wrap-input validate-input first" data-validate="Enter email">
+                            <figure class="email-input__icon">
+                                <img src="assets/icons/mail.png" alt="letter icon" class="mail-letter" />
+                            </figure>
                             <input class="input" id="email__input" type="email" name="email" placeholder="Your email"
                                 required>
                         </div>
 
                         <div class="wrap-input validate-input second" data-validate="Enter password">
+                            <figure class="password-input__icon">
+                                <img src="assets/icons/pass-lock.png" alt="pass lock" class="pass-lock" />
+                            </figure>
                             <input class="input" id="password__input" type="password" minlength=5 name="password"
                                 placeholder="Password" required>
+                            <figure class="show-password-input__icon">
+                                <img src="assets/icons/show-pass.png" alt="show password" class="show-pass" />
+                            </figure>
                         </div>
 
-                        <span class="under-wrap help-text">Need help?</span>
+                        <span class="under-wrap">
+                            <p class="help-text">Need help?</p>
+                        </span>
 
                         <div class="container-login-form__btn">
                             <button class="login-form__btn" type="submit">login</button>
                         </div>
 
-                        <span class="under-button help-text">Don't have an account?</span>
+                        <span class="under-button">
+                            <p class="help-text no-account">Don't have an account?</p>
+                        </span>
 
                         <div id="errorMsg" class="errors__info"></div>
                     </div>
