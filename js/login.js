@@ -9,21 +9,17 @@ let haveAccount = document.querySelector('.have-account');
 
 let errors = [];
 
-// haveAccount.addEventListener('click', (e)=>{
-//     window.location.href = '../index.html';
-// });
-
-noAccount.addEventListener('click', (e)=>{
-    window.location.href = '../assets/htmls/signup.html';
+haveAccount.addEventListener('click', ()=>{
+    window.location.href = '../index.html';
 });
 
-// noAccount.addEventListener('click', ()=>{
-//     window.location.href = '../htmls/signup.html';
-// });
+noAccount.addEventListener('click', ()=>{
+    window.location.href = '../htmls/signup.html';
+});
 
-// closeButton.addEventListener('click', ()=>{
-//     window.location.href = '../htmls/main.html';
-// });
+closeButton.addEventListener('click', ()=>{
+    window.location.href = '../htmls/main.html';
+});
 
 //Проверка для каждого поля (поля получаем по одному в функции ниже в цикле)
 function checkValidity(input) {
