@@ -19,7 +19,7 @@
     background-position: center center;
 
     &__wrapper {
-        margin: 0px auto;
+        margin: 6% auto 0 auto;
         width: 85%;
     }
     &__step {
@@ -60,7 +60,7 @@
     }
 
     .unlimited {
-        margin: 0 50px 50px 0;
+        margin: 0 50px 25px 0;
 
         &__title {
             color: #b9b78d;
@@ -212,7 +212,7 @@
             line-height: 52px;
         }
         &__cards {
-            margin-top: 5%;
+            margin-top: 2%;
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
@@ -227,14 +227,15 @@
             }
         }
         &__card {
-            @include flex-center;
-            align-items: center;
+            // display: flex;
+            // justify-content: space-evenly;
+            // align-items: baseline;
         }
         &__label {
             margin-left: 5%;
         }
         &__button {
-            margin-top: 5%;
+            margin-top: 1%;
             @include flex-center;
         }
         &__submit {
@@ -465,5 +466,69 @@ form {
     .card {
         width: 90%;
         padding: 8vh;
+    }
+}
+@media screen and (max-width: 767px) {
+    body {
+        max-width: 100%;
+    }
+    .payment {
+        &__wrapper {
+            margin: 2%;
+        }
+        &__step {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1%;
+        }
+        &__line {
+            display: none;
+        }
+        &__tariff {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: baseline;
+        }
+        &__tariff-block {
+            padding: 3.5%;
+            font-size: 20px;
+            margin-bottom: 2%;
+            align-self: center;
+        }
+
+        .unlimited {
+            margin: 0;
+            &__main-block {
+                display: flex;
+            }
+            &__text {
+                margin-left: 1%;
+                font-size: 15px;
+                line-height: 15px;
+                word-wrap: break-all;
+            }
+        }
+        .second-page__wrapper {
+            display: flex;
+        }
+        .second-page__logo {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .payment__packages {
+        margin-right: 5%;
+    }
+    .payment__tariff-block {
+        padding: 3.5%;
+    }
+
+    .payment__tariff-block:hover {
+        transform: scale(1.1);
+        cursor: pointer;
     }
 }
