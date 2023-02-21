@@ -465,6 +465,9 @@ body {
 }
 
 .movie2 div {
+  font-family: "Comfortaa";
+  font-size: 1.1em;
+  font-style: normal;
   overflow: auto;
   background-color: #475F66;
   border-radius: 30px;
@@ -487,11 +490,14 @@ body {
     margin-right: 0px;
   }
   .movie2 {
-    font-size: 2em;
+    font-size: 1.2em;
   }
   .movie2 div {
     width: 80%;
-    height: 85%;
+    height: 90%;
+  }
+  .movie__description {
+    margin: 20px 10px;
   }
 }
 @font-face {
