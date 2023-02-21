@@ -4,12 +4,12 @@ let button = document.querySelector(".login-form__btn");
 let form = document.querySelector('#login__form');
 let inputField = document.querySelectorAll('input');
 let closeButton = document.querySelector('.js-close-button');
-let noAccount = document.querySelector('.no-account');
+let haveAccount = document.querySelector('.have-account');
 
 let errors = [];
 
-noAccount.addEventListener('click', ()=>{
-    window.location.href = '../htmls/signup.html';
+haveAccount.addEventListener('click', ()=>{
+    window.location.href = '../index.html';
 });
 
 closeButton.addEventListener('click', ()=>{
