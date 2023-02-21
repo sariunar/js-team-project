@@ -222,6 +222,7 @@
   background: white;
   width: 100%;
 }
+
 .second-page .main-block__label {
   margin-left: 5%;
 }
@@ -294,8 +295,7 @@
 .nav ul {
   list-style-type: none;
   display: flex;
-  -webkit-padding-start: unset;
-          padding-inline-start: unset;
+  padding-inline-start: unset;
   margin-bottom: 6vh;
 }
 .nav li a {

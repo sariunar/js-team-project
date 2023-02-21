@@ -204,7 +204,6 @@ h2 {
 }
 .login-form .wrap-input.validate-input .input:focus::-webkit-input-placeholder {
   color: transparent;
-  -webkit-transition: 500ms;
   transition: 500ms;
 }
 
@@ -668,6 +667,7 @@ body {
   background: white;
   width: 100%;
 }
+
 .second-page .main-block__label {
   margin-left: 5%;
 }
@@ -740,8 +740,7 @@ body {
 .nav ul {
   list-style-type: none;
   display: flex;
-  -webkit-padding-start: unset;
-          padding-inline-start: unset;
+  padding-inline-start: unset;
   margin-bottom: 6vh;
 }
 .nav li a {
