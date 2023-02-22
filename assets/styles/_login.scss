@@ -51,6 +51,13 @@ h2 {
 
 /*      FORM STYLES     */
 
+@media screen and (min-width: 767px) {
+    .login-form__close-button {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
+}
 
 .login-form__container {
     width: 100%;
@@ -94,7 +101,7 @@ h2 {
                 }
 
                 .logo-img {
-                    margin-left: 60px;
+                    margin-left: 10px;
                     max-width: 30%;
                 }
 
