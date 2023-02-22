@@ -31,8 +31,7 @@
 
 .header__body {
     position: relative;
-    display: flex;
-    justify-content: space-between;
+    @include flex-space-between;
     align-items: center;
     height: 80px;
 }
@@ -49,9 +48,8 @@
 }
 
 .header__list {
-    display: flex;
+    @include flex-space-between;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     position: relative;
     z-index: 2;
