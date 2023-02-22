@@ -204,6 +204,7 @@ h2 {
 }
 .login-form .wrap-input.validate-input .input:focus::-webkit-input-placeholder {
   color: transparent;
+  -webkit-transition: 500ms;
   transition: 500ms;
 }
 
@@ -667,7 +668,6 @@ body {
   background: white;
   width: 100%;
 }
-
 .second-page .main-block__label {
   margin-left: 5%;
 }
@@ -740,7 +740,8 @@ body {
 .nav ul {
   list-style-type: none;
   display: flex;
-  padding-inline-start: unset;
+  -webkit-padding-start: unset;
+          padding-inline-start: unset;
   margin-bottom: 6vh;
 }
 .nav li a {
@@ -902,9 +903,62 @@ form .row .col-2 {
     padding: 8vh;
   }
 }
+@media screen and (max-width: 767px) {
+  body {
+    max-width: 100%;
+  }
+  .payment__wrapper {
+    margin: 2%;
+  }
+  .payment__step {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1%;
+  }
+  .payment__line {
+    display: none;
+  }
+  .payment__tariff {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+  }
+  .payment__tariff-block {
+    padding: 3.5%;
+    font-size: 20px;
+    margin-bottom: 2%;
+    align-self: center;
+  }
+  .payment .unlimited {
+    margin: 0;
+  }
+  .payment .unlimited__main-block {
+    display: flex;
+  }
+  .payment .unlimited__text {
+    margin-left: 1%;
+    font-size: 15px;
+    line-height: 15px;
+    word-wrap: break-all;
+  }
+  .payment .second-page__wrapper {
+    display: flex;
+  }
+  .payment .second-page__logo {
+    display: none;
+  }
+}
 @media (min-width: 768px) and (max-width: 1200px) {
-  .unlimited__tariff-block:hover {
-    transform: scale(0.1);
+  .payment__packages {
+    margin-right: 5%;
+  }
+  .payment__tariff-block {
+    padding: 3.5%;
+  }
+  .payment__tariff-block:hover {
+    transform: scale(1.1);
     cursor: pointer;
   }
 }

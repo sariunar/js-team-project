@@ -15,7 +15,6 @@
   display: flex;
   flex-direction: column;
   background: linear-gradient(114.23deg, #594444 14.64%, rgba(0, 0, 0, 0.7) 47.07%, #475f66 80.65%);
-  min-width: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -108,6 +107,7 @@
 .payment__tariff-block {
   background-image: url("../images/payment/films-pic.png");
   background-repeat: no-repeat;
+  width: 100%;
   padding: 5.5%;
   border-radius: 50px;
   color: white;
@@ -222,7 +222,6 @@
   background: white;
   width: 100%;
 }
-
 .second-page .main-block__label {
   margin-left: 5%;
 }
@@ -295,7 +294,8 @@
 .nav ul {
   list-style-type: none;
   display: flex;
-  padding-inline-start: unset;
+  -webkit-padding-start: unset;
+          padding-inline-start: unset;
   margin-bottom: 6vh;
 }
 .nav li a {
@@ -462,7 +462,7 @@ form .row .col-2 {
     max-width: 100%;
   }
   .payment__wrapper {
-    margin: 2%;
+    margin: 12% 2% 2% 2%;
   }
   .payment__step {
     margin: 0;
@@ -477,7 +477,7 @@ form .row .col-2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: baseline;
+    align-items: center;
   }
   .payment__tariff-block {
     padding: 3.5%;
@@ -485,23 +485,68 @@ form .row .col-2 {
     margin-bottom: 2%;
     align-self: center;
   }
+  .payment__tariff-block p {
+    text-align: center;
+  }
+  .payment__tariff-block:hover {
+    transform: scale(1.1);
+    margin: 5% 0% 5% 10%;
+  }
   .payment .unlimited {
-    margin: 0;
+    margin: 10px 0;
   }
   .payment .unlimited__main-block {
     display: flex;
   }
   .payment .unlimited__text {
-    margin-left: 1%;
-    font-size: 15px;
-    line-height: 15px;
-    word-wrap: break-all;
+    font-size: 1em;
+    font-weight: lighter;
+    line-height: 25px;
   }
   .payment .second-page__wrapper {
     display: flex;
   }
   .payment .second-page__logo {
     display: none;
+  }
+  .payment .second-page .main-block__title {
+    font-size: 2em;
+  }
+}
+@media (max-width: 450px) {
+  .payment__wrapper {
+    margin: 15% 2% 2% 2%;
+  }
+  .payment .second-page__wrapper {
+    display: flex;
+  }
+  .payment .second-page__logo {
+    display: none;
+  }
+  .payment .second-page .main-block {
+    margin-left: 0;
+    width: 100%;
+  }
+  .payment .second-page .main-block__title {
+    font-size: 2em;
+  }
+  .payment .second-page .main-block__blue {
+    font-size: 1em;
+  }
+  .payment .second-page .main-block__premium-acc {
+    font-size: 1.2em;
+  }
+  .payment .second-page .main-block__package-name, .payment .second-page .main-block__valid-date, .payment .second-page .main-block__exp-date {
+    margin-left: 0;
+    font-size: 1em;
+  }
+  .payment .second-page .main-block__cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .payment .second-page .main-block__card {
+    padding: 5% 0 5% 0;
   }
 }
 @media (min-width: 768px) and (max-width: 1200px) {
