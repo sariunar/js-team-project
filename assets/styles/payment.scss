@@ -127,7 +127,6 @@
         border-radius: 50px;
         @include uppercase-white;
         font-size: 30px;
-
     }
 
     &__tariff-block:hover {
@@ -373,7 +372,6 @@ input[type="text"] {
 }
 
 .inputbox {
-
     #input__border,
     #input__border2,
     #input__border3,
@@ -536,6 +534,12 @@ form {
         &__wrapper {
             margin: 12% 2% 2% 2%;
         }
+        // &__packages {
+        //     display: flex;
+        //     flex-direction: column;
+        //     justify-content: center;
+        //     align-items: center;
+        // }
 
         &__step {
             margin: 0;
@@ -566,12 +570,10 @@ form {
             }
         }
 
-
         &__tariff-block:hover {
             transform: scale(1.1);
             margin: 5% 0% 5% 10%;
         }
-
 
         .unlimited {
             margin: 10px 0;
@@ -587,7 +589,6 @@ form {
             }
         }
 
-
         .second-page {
             &__wrapper {
                 display: flex;
@@ -598,7 +599,6 @@ form {
             }
 
             .main-block {
-
                 &__title {
                     font-size: 2em;
                 }
@@ -608,12 +608,10 @@ form {
 }
 
 @media (max-width: 450px) {
-
     .payment {
         &__wrapper {
             margin: 15% 2% 2% 2%;
         }
-
         .second-page {
             &__wrapper {
                 display: flex;
