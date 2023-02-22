@@ -1,8 +1,10 @@
 @import "../../assets/styles/vars.scss";
+
 @font-face {
     font-family: "BELLABIO";
     src: url(../fonts/Bellabio/Bellabio\ Regular.ttf);
 }
+
 * {
     @include reset;
 }
@@ -13,7 +15,7 @@
     overflow: hidden;
     @include f-column;
     background: linear-gradient(114.23deg, #594444 14.64%, rgba(0, 0, 0, 0.7) 47.07%, #475f66 80.65%);
-    min-width: 100vh;
+    //min-width: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -22,11 +24,13 @@
         margin: 6% auto 0 auto;
         width: 85%;
     }
+
     &__step {
         margin: 2% 15%;
         @include flex-center;
         gap: 5%;
     }
+
     &__steps {
         display: flex;
         align-items: center;
@@ -42,17 +46,21 @@
     &__text {
         color: $main-color;
         text-transform: uppercase;
+
         &_chosen {
             color: $hover-payment-color;
             cursor: pointer;
         }
+
         &_one:hover {
             cursor: pointer;
         }
     }
+
     &__change-color {
         color: #68acbf;
     }
+
     &__line {
         background-color: white;
         width: 45px;
@@ -75,9 +83,11 @@
             justify-content: center;
             align-items: center;
         }
+
         &__picture-one {
             max-width: 100%;
         }
+
         &__pic-text {
             @include uppercase-white;
             margin-top: 10px;
@@ -112,10 +122,12 @@
     &__tariff-block {
         background-image: url("../images/payment/films-pic.png");
         background-repeat: no-repeat;
+        width: 100%;
         padding: 5.5%;
         border-radius: 50px;
         @include uppercase-white;
         font-size: 30px;
+
     }
 
     &__tariff-block:hover {
@@ -132,6 +144,7 @@
         text-align: center;
         display: none;
     }
+
     &__first-step {
         display: block;
     }
@@ -145,13 +158,16 @@
         display: grid;
         grid-template-columns: 30% 70%;
     }
+
     &__logo {
         @include flex-center;
         align-items: center;
     }
+
     &__main {
         display: flex;
     }
+
     &__pic-text {
         font-family: BELLABIO;
         color: white;
@@ -163,11 +179,14 @@
         color: white;
         width: 100%;
     }
+
     &__main {
         @include f-column;
     }
+
     .main-block {
         margin-left: 10%;
+
         &__title {
             text-align: center;
             @include uppercase-white;
@@ -177,20 +196,24 @@
             line-height: 70px;
             text-decoration-line: underline;
         }
+
         &__block {
             @include flex-space-between;
             flex-wrap: wrap;
         }
+
         &__blue {
             font-weight: 250;
             font-size: 20px;
             line-height: 52px;
             color: #68acbf;
         }
+
         &__premium-acc {
             @include uppercase-white;
             font-size: 25px;
             line-height: 52px;
+
             &:after {
                 content: "";
                 display: block;
@@ -198,6 +221,7 @@
                 background: white;
             }
         }
+
         &__package-name,
         &__valid-date,
         &__exp-date {
@@ -206,17 +230,20 @@
             font-size: 25px;
             line-height: 52px;
         }
+
         &__total {
             @include uppercase-white;
             font-size: 25px;
             line-height: 52px;
         }
+
         &__cards {
             margin-top: 2%;
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
         }
+
         .block-total {
             &:after {
                 content: "";
@@ -226,18 +253,22 @@
                 width: 100%;
             }
         }
-        &__card {
-            // display: flex;
-            // justify-content: space-evenly;
-            // align-items: baseline;
-        }
+
+        // &__card {
+        //     // display: flex;
+        //     // justify-content: space-evenly;
+        //     // align-items: baseline;
+        // }
+
         &__label {
             margin-left: 5%;
         }
+
         &__button {
             margin-top: 1%;
             @include flex-center;
         }
+
         &__submit {
             padding: 1%;
             outline: none;
@@ -252,14 +283,17 @@
             text-transform: uppercase;
             width: 250px;
         }
+
         &__card-container {
             display: block;
         }
+
         .main-block__submit:hover {
             transform: scale(1.2);
             cursor: pointer;
             color: #68acbf;
         }
+
         &__bank-card {
             display: none;
             opacity: 1;
@@ -277,11 +311,13 @@
     opacity: 1;
     visibility: visible;
     position: sticky;
+
     &__block {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
 }
+
 .modal__wrapper {
     padding: 3%;
     border-radius: 50px;
@@ -297,14 +333,17 @@
     font-weight: 700;
     font-size: 2.5em;
 }
+
 .nav {
     display: flex;
+
     ul {
         list-style-type: none;
         display: flex;
         padding-inline-start: unset;
         margin-bottom: 6vh;
     }
+
     li {
         a {
             color: black;
@@ -312,6 +351,7 @@
         }
     }
 }
+
 .active {
     font-weight: bold;
 }
@@ -327,10 +367,13 @@ input {
     border-color: transparent;
     margin: 0;
 }
+
 input[type="text"] {
     border-color: rgba(128, 128, 128, 0.345) !important;
 }
+
 .inputbox {
+
     #input__border,
     #input__border2,
     #input__border3,
@@ -338,17 +381,20 @@ input[type="text"] {
         border: 1px solid red;
     }
 }
+
 form {
     a {
         color: grey;
         text-decoration: none;
         font-size: 0.87rem;
         font-weight: bold;
+
         :hover {
             color: grey;
             text-decoration: none;
         }
     }
+
     // form .row {
     //     margin: 0;
     //     overflow: hidden;
@@ -364,6 +410,7 @@ form {
         background-color: rgba(221, 228, 236, 0.301);
         overflow: hidden;
     }
+
     .row-2 {
         border: none;
         outline: none;
@@ -371,6 +418,7 @@ form {
         margin: 0;
         padding: 0 0.8rem;
     }
+
     .row {
         .row-2 {
             border: none;
@@ -379,6 +427,7 @@ form {
             margin: 0;
             padding: 0 0.8rem;
         }
+
         .col-2,
         .col-7,
         .col-3 {
@@ -387,6 +436,7 @@ form {
             text-align: center;
             padding: 0 1vh;
         }
+
         .col-2 {
             padding-right: 0;
         }
@@ -397,6 +447,7 @@ form {
     font-weight: bold;
     font-size: 0.9rem;
 }
+
 #card-inner {
     font-size: 0.7rem;
     color: gray;
@@ -405,9 +456,11 @@ form {
 .three {
     overflow: hidden;
     justify-content: space-between;
+
     .col-7 {
         padding-left: 0;
     }
+
     .col-2 {
         border: 1px solid rgba(0, 0, 0, 0.137);
         padding: 0.5rem;
@@ -420,6 +473,7 @@ form {
         margin: 2vh 0;
         width: fit-content;
         overflow: hidden;
+
         input {
             font-size: 0.7rem;
             margin-left: 1vh;
@@ -438,12 +492,14 @@ form {
     color: $payment-grey-color;
     background-color: white;
 }
+
 .btn:focus {
     box-shadow: none;
     outline: none;
     box-shadow: none;
     transition: none;
 }
+
 .btn:hover {
     color: white;
     background-color: $payment-grey-color;
@@ -456,65 +512,150 @@ form {
     color: white;
     transition: background-color 2s ease-out;
 }
+
 @media (max-width: 767px) {
     .card {
         width: 90%;
         padding: 1.5rem;
     }
 }
+
 @media (height: 1366px) {
     .card {
         width: 90%;
         padding: 8vh;
     }
 }
+
 @media screen and (max-width: 767px) {
     body {
         max-width: 100%;
     }
+
     .payment {
         &__wrapper {
-            margin: 2%;
+            margin: 12% 2% 2% 2%;
         }
+
         &__step {
             margin: 0;
             display: flex;
             flex-direction: column;
             gap: 1%;
         }
+
         &__line {
             display: none;
         }
+
         &__tariff {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: baseline;
+            align-items: center;
         }
+
         &__tariff-block {
             padding: 3.5%;
             font-size: 20px;
             margin-bottom: 2%;
             align-self: center;
+
+            p {
+                text-align: center;
+            }
         }
 
+
+        &__tariff-block:hover {
+            transform: scale(1.1);
+            margin: 5% 0% 5% 10%;
+        }
+
+
         .unlimited {
-            margin: 0;
+            margin: 10px 0;
+
             &__main-block {
                 display: flex;
             }
+
             &__text {
-                margin-left: 1%;
-                font-size: 15px;
-                line-height: 15px;
-                word-wrap: break-all;
+                font-size: 1em;
+                font-weight: lighter;
+                line-height: 25px;
             }
         }
-        .second-page__wrapper {
-            display: flex;
+
+
+        .second-page {
+            &__wrapper {
+                display: flex;
+            }
+
+            &__logo {
+                display: none;
+            }
+
+            .main-block {
+
+                &__title {
+                    font-size: 2em;
+                }
+            }
         }
-        .second-page__logo {
-            display: none;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .payment {
+        &__wrapper {
+            margin: 15% 2% 2% 2%;
+        }
+
+        .second-page {
+            &__wrapper {
+                display: flex;
+            }
+
+            &__logo {
+                display: none;
+            }
+
+            .main-block {
+                margin-left: 0;
+                width: 100%;
+
+                &__title {
+                    font-size: 2em;
+                }
+
+                &__blue {
+                    font-size: 1em;
+                }
+
+                &__premium-acc {
+                    font-size: 1.2em;
+                }
+
+                &__package-name,
+                &__valid-date,
+                &__exp-date {
+                    margin-left: 0;
+                    font-size: 1em;
+                }
+
+                &__cards {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                &__card {
+                    padding: 5% 0 5% 0;
+                }
+            }
         }
     }
 }
@@ -523,6 +664,7 @@ form {
     .payment__packages {
         margin-right: 5%;
     }
+
     .payment__tariff-block {
         padding: 3.5%;
     }
