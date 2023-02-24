@@ -28,8 +28,15 @@ function showSlides(n) {
 //EY98ZH1-RBT4RZH-H5BT7MP-KAZT7FJ 
 const API_key = 'EY98ZH1-RBT4RZH-H5BT7MP-KAZT7FJ';
 
+//Ссылка на payment.html в JSON'е, по-другому добавление через js не работает 
+var payRedirectLink = `[{
+    "link": "../htmls/payment.html"
+}]`;
+
 document.addEventListener("DOMContentLoaded", function (event) {
     let moviesContent = "";
+    let payHref = JSON.parse(payRedirectLink); //payment.html link
+
     fetch(`https://api.kinopoisk.dev/collection?token=${API_key}&search=top_items_all&field=collectionId`)
         .then(response => response.json())
         .then(movie => {
@@ -44,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                             <p class="movie__name">${movie.movies[i].name}, ${movie.movies[i].year}</p>
                             <img class = "movie__img" src = ${movie.movies[i].poster.previewUrl}>
                             <p class="movie__description">${movie.movies[i].description}</p>
-                            <a href="" class="movie__link">Смотреть</a>
+                            <a href='${payHref[0].link}' class="movie__link">Смотреть</a>
                         </div>
                     </div>
                 </div>
@@ -72,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                             <p class="movie__name">${movie.docs[i].name}, ${movie.docs[i].year}</p>
                             <img class = "movie__img" src = ${movie.docs[i].poster.previewUrl}>
                             <p class="movie__description">${movie.docs[i].description}</p>
-                            <a href="" class="movie__link">Смотреть</a>
+                            <a href='${payHref[0].link}' class="movie__link">Смотреть</a>
                         </div>
                     </div>
                 </div>
@@ -99,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                             <p class="movie__name">${movie.docs[i].name}, ${movie.docs[i].year}</p>
                             <img class = "movie__img" src = ${movie.docs[i].poster.previewUrl}>
                             <p class="movie__description">${movie.docs[i].description}</p>
-                            <a href="" class="movie__link">Смотреть</a>
+                            <a href='${payHref[0].link}' class="movie__link">Смотреть</a>
                         </div>
                     </div>
                 </div>`
@@ -124,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                             <p class="movie__name">${movie.docs[i].name}, ${movie.docs[i].year}</p>
                             <img class = "movie__img" src = ${movie.docs[i].poster.previewUrl}>
                             <p class="movie__description">${movie.docs[i].description}</p>
-                            <a href="" class="movie__link">Смотреть</a>
+                            <a href='${payHref[0].link}' class="movie__link">Смотреть</a>
                         </div>
                     </div>
                 </div>`
@@ -149,3 +156,9 @@ movieContainer.addEventListener('click', (event) => {
         }
     }
 })
+
+// const paymentRedirect = document.querySelector('.movie__link');
+// paymentRedirect.addEventListener('click', (e)=>{
+//     location.reload();
+//     window.location.href = '../htmls/payment.html';
+// });
