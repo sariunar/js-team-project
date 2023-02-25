@@ -9,11 +9,11 @@ let noAccount = document.querySelector('.no-account');
 let errors = [];
 
 noAccount.addEventListener('click', ()=>{
-    window.location.href = '../htmls/signup.html';
+    window.location.href = 'htmls/signup.html';
 });
 
 closeButton.addEventListener('click', ()=>{
-    window.location.href = '../htmls/main.html';
+    window.location.href = 'htmls/main.html';
 });
 
 //Проверка для каждого поля (поля получаем по одному в функции ниже в цикле)
@@ -65,7 +65,7 @@ button.addEventListener('click', ()=>{
         alert(`Welcome, ${document.getElementById("email__input").value}`);
         location.reload();//перезагружаем страницу, если всё введено корректно, 
         //чтобы очистить поля для дальнейшего ввода
-        window.location.href = '../htmls/main.html';
+        window.location.href = 'htmls/main.html';
     }
 
     errors = []; //чистим массив
