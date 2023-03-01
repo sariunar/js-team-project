@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/otter00/Web-Project-2.0"
+    "url": "git+https://github.com/otter00/js-team-project.git"
   },
   "keywords": [
     "api",
@@ -18,9 +18,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/otter00/Web-Project-2.0/issues"
+    "url": "https://github.com/otter00/js-team-project/issues"
   },
-  "homepage": "https://github.com/otter00/Web-Project-2.0#readme",
+  "homepage": "https://github.com/otter00/js-team-project#readme",
   "dependencies": {
     "browserify": "^17.0.0",
     "moment": "^2.29.4"
