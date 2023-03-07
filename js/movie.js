@@ -1,18 +1,15 @@
 //слайдер
 let slideIndex = 1;
-showSlides(slideIndex);
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
 function showSlides(n) {
     let i;
     let slides = document.getElementsByClassName("slideshow__slides");
     let dots = document.getElementsByClassName("slideshow__dot");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
+    if (n > slides.length) {
+        slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides.length
+    }
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
@@ -22,7 +19,13 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active2";
 }
-
+showSlides(slideIndex);
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
 
 //API с фильмами
 //EY98ZH1-RBT4RZH-H5BT7MP-KAZT7FJ 
@@ -156,9 +159,3 @@ movieContainer.addEventListener('click', (event) => {
         }
     }
 })
-
-// const paymentRedirect = document.querySelector('.movie__link');
-// paymentRedirect.addEventListener('click', (e)=>{
-//     location.reload();
-//     window.location.href = '../htmls/payment.html';
-// });

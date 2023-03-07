@@ -118,7 +118,7 @@
   transform: scale(1.2);
   cursor: pointer;
 }
-.payment__on-click, .payment__on-click2, .payment__on-click3 {
+.payment__on-click {
   background-color: rgba(0, 0, 255, 0.427);
   border-radius: 40px;
   padding: 5px;

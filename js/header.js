@@ -1,7 +1,6 @@
-$(document).ready(function() {
-    $('.header__burger').click(function(event){
-       $('.header__burger,.header__menu').toggleClass('active');
-       $('body').toggleClass('lock');
-
-    });
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('.header__burger').addEventListener('click', () => {
+        document.querySelector('.header__burger').classList.toggle('active');
+        document.querySelector('.header__menu').classList.toggle('active');
+    })
 });
