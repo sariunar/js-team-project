@@ -1,6 +1,6 @@
 # JS-team-project
 
-- First JS team project
+- First JS team project. Make a responsive movies website with movies API.
 
 `GitHub Pages link:` https://otter00.github.io/js-team-project/
 
