@@ -2,7 +2,7 @@
 
 - First JS team project. Make a responsive movies website with movies API.
 
-`GitHub Pages link:` https://otter00.github.io/js-team-project/
+`GitHub Pages link:` https://sariunar.github.io/js-team-project/
 
 ## Subject:
 
