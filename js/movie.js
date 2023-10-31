@@ -38,12 +38,11 @@ var payRedirectLink = `[{
 document.addEventListener("DOMContentLoaded", function (event) {
     let moviesContent = "";
     let payHref = JSON.parse(payRedirectLink); //payment.html link
-    
+
     fetch(`https://api.kinopoisk.dev/v1.3/movie?token=${API_key}&top250=!null&limit=10`)
         .then(response => response.json())
-        .then(movie => {
-            //console.log(movie.docs[0])
-           for (let i = 0; i < 10; i++) {
+        .then(movie => {moviesContent = "";
+           for (let i = 0; i < 10; i++) { 
                 moviesContent += `
                 <div class = "movie">
                     <p class="movie__year">Год: ${movie.docs[i].year}</p>
@@ -68,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         .then(response => response.json())
         .then(movie => {
             moviesContent = "";
-            for (let i = 0; i < 5; i++) {
+            for (let i = 0; i < 10; i++) {
                 moviesContent += `
                 <div class = "movie">
                     <p class="movie__year">Год: ${movie.docs[i].year}</p>
@@ -93,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         .then(response => response.json())
         .then(movie => {
             moviesContent = "";
-            for (let i = 0; i < 5; i++) {
+            for (let i = 0; i < 10; i++) {
                 moviesContent += `
                 <div class = "movie">
                     <p class="movie__year">Год: ${movie.docs[i].year}</p>
@@ -118,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         .then(response => response.json())
         .then(movie => {
             moviesContent = "";
-            for (let i = 0; i < 5; i++) {
+            for (let i = 0; i < 10; i++) {
                 moviesContent += `
                 <div class = "movie">
                     <p class="movie__year">Год: ${movie.docs[i].year}</p>
@@ -139,6 +138,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         })
         .catch(error => console.log(error));
 })
+
 //Модальное окно
 const movieContainer = document.querySelector('.movies');
 movieContainer.addEventListener('click', (event) => {
