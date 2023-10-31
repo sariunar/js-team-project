@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/otter00/js-team-project#readme",
   "dependencies": {
+    "@openmoviedb/kinopoiskdev_client": "^1.3.10",
     "browserify": "^17.0.0",
     "moment": "^2.29.4"
   }
