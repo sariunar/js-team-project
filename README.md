@@ -1,8 +1,8 @@
-# JS-team-project
+# JS-project
 
-- First JS team project. Make a responsive movies website with movies API. 
+-  Make a responsive movies website with movies API. 
 
-`GitHub Pages link:` https://sariunar.github.io/js-team-project/
+`GitHub Pages link:` https://sariunar.github.io/movies-app/
 
 ![image](https://github.com/sariunar/js-team-project/assets/90380387/ee5aef22-c844-4439-9523-4a24f2759c5e)
 ![image](https://user-images.githubusercontent.com/90380387/233774460-cfe13c79-26ea-4b3b-9608-3758a65ae11f.png)
